@@ -1,0 +1,2737 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Web&#x524d;&#x7aef;&#x7b14;&#x8bb0;</title>
+  <style>
+    /* From extension vscode.github */
+    /*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+    .vscode-dark img[src$=\#gh-light-mode-only],
+    .vscode-light img[src$=\#gh-dark-mode-only],
+    .vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+    .vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+      display: none;
+    }
+
+    /* From extension zhuangtongfa.material-theme */
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body {
+      box-sizing: border-box;
+      min-width: 200px;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body blockquote,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body blockquote,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body blockquote,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body blockquote {
+      background-color: initial;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body pre,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body pre,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body pre,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body pre {
+      color: initial;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body code,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body code,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body code,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body code {
+      color: inherit;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body pre code,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body pre code,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body pre code,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body pre code {
+      color: initial;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body code>div,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body code>div,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body code>div,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body code>div {
+      background: none;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body table th,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body table td,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body table th,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body table td,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body table th,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body table td,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body table th,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body table td {
+      border: 1px solid rgba(171, 178, 191, 0.5) !important;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body.showEditorSelection .code-active-line:before,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body.showEditorSelection .code-active-line:before,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body.showEditorSelection .code-active-line:before,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body.showEditorSelection .code-active-line:before {
+      border-left: none;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body.showEditorSelection .code-line:hover:before,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body.showEditorSelection .code-line:hover:before,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body.showEditorSelection .code-line:hover:before,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body.showEditorSelection .code-line:hover:before {
+      border-left: none;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body.showEditorSelection .code-line .code-line:hover:before,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body.showEditorSelection .code-line .code-line:hover:before,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body.showEditorSelection .code-line .code-line:hover:before,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body.showEditorSelection .code-line .code-line:hover:before {
+      border-left: none;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body p,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body blockquote,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body ul,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body ol,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body dl,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body table,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body pre,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body p,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body blockquote,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body ul,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body ol,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body dl,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body table,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body pre,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body p,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body blockquote,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body ul,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body ol,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body dl,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body table,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body pre,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body p,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body blockquote,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body ul,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body ol,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body dl,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body table,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body pre {
+      margin-top: 16px;
+      margin-bottom: 16px;
+    }
+
+    /* Generated from 'node_modules/github-markdown-css/github-markdown.css' */
+    @font-face {
+      font-family: octicons-link;
+      src: url(data:font/woff;charset=utf-8;base64,d09GRgABAAAAAAZwABAAAAAACFQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEU0lHAAAGaAAAAAgAAAAIAAAAAUdTVUIAAAZcAAAACgAAAAoAAQAAT1MvMgAAAyQAAABJAAAAYFYEU3RjbWFwAAADcAAAAEUAAACAAJThvmN2dCAAAATkAAAABAAAAAQAAAAAZnBnbQAAA7gAAACyAAABCUM+8IhnYXNwAAAGTAAAABAAAAAQABoAI2dseWYAAAFsAAABPAAAAZwcEq9taGVhZAAAAsgAAAA0AAAANgh4a91oaGVhAAADCAAAABoAAAAkCA8DRGhtdHgAAAL8AAAADAAAAAwGAACfbG9jYQAAAsAAAAAIAAAACABiATBtYXhwAAACqAAAABgAAAAgAA8ASm5hbWUAAAToAAABQgAAAlXu73sOcG9zdAAABiwAAAAeAAAAME3QpOBwcmVwAAAEbAAAAHYAAAB/aFGpk3jaTY6xa8JAGMW/O62BDi0tJLYQincXEypYIiGJjSgHniQ6umTsUEyLm5BV6NDBP8Tpts6F0v+k/0an2i+itHDw3v2+9+DBKTzsJNnWJNTgHEy4BgG3EMI9DCEDOGEXzDADU5hBKMIgNPZqoD3SilVaXZCER3/I7AtxEJLtzzuZfI+VVkprxTlXShWKb3TBecG11rwoNlmmn1P2WYcJczl32etSpKnziC7lQyWe1smVPy/Lt7Kc+0vWY/gAgIIEqAN9we0pwKXreiMasxvabDQMM4riO+qxM2ogwDGOZTXxwxDiycQIcoYFBLj5K3EIaSctAq2kTYiw+ymhce7vwM9jSqO8JyVd5RH9gyTt2+J/yUmYlIR0s04n6+7Vm1ozezUeLEaUjhaDSuXHwVRgvLJn1tQ7xiuVv/ocTRF42mNgZGBgYGbwZOBiAAFGJBIMAAizAFoAAABiAGIAznjaY2BkYGAA4in8zwXi+W2+MjCzMIDApSwvXzC97Z4Ig8N/BxYGZgcgl52BCSQKAA3jCV8CAABfAAAAAAQAAEB42mNgZGBg4f3vACQZQABIMjKgAmYAKEgBXgAAeNpjYGY6wTiBgZWBg2kmUxoDA4MPhGZMYzBi1AHygVLYQUCaawqDA4PChxhmh/8ODDEsvAwHgMKMIDnGL0x7gJQCAwMAJd4MFwAAAHjaY2BgYGaA4DAGRgYQkAHyGMF8NgYrIM3JIAGVYYDT+AEjAwuDFpBmA9KMDEwMCh9i/v8H8sH0/4dQc1iAmAkALaUKLgAAAHjaTY9LDsIgEIbtgqHUPpDi3gPoBVyRTmTddOmqTXThEXqrob2gQ1FjwpDvfwCBdmdXC5AVKFu3e5MfNFJ29KTQT48Ob9/lqYwOGZxeUelN2U2R6+cArgtCJpauW7UQBqnFkUsjAY/kOU1cP+DAgvxwn1chZDwUbd6CFimGXwzwF6tPbFIcjEl+vvmM/byA48e6tWrKArm4ZJlCbdsrxksL1AwWn/yBSJKpYbq8AXaaTb8AAHja28jAwOC00ZrBeQNDQOWO//sdBBgYGRiYWYAEELEwMTE4uzo5Zzo5b2BxdnFOcALxNjA6b2ByTswC8jYwg0VlNuoCTWAMqNzMzsoK1rEhNqByEyerg5PMJlYuVueETKcd/89uBpnpvIEVomeHLoMsAAe1Id4AAAAAAAB42oWQT07CQBTGv0JBhagk7HQzKxca2sJCE1hDt4QF+9JOS0nbaaYDCQfwCJ7Au3AHj+LO13FMmm6cl7785vven0kBjHCBhfpYuNa5Ph1c0e2Xu3jEvWG7UdPDLZ4N92nOm+EBXuAbHmIMSRMs+4aUEd4Nd3CHD8NdvOLTsA2GL8M9PODbcL+hD7C1xoaHeLJSEao0FEW14ckxC+TU8TxvsY6X0eLPmRhry2WVioLpkrbp84LLQPGI7c6sOiUzpWIWS5GzlSgUzzLBSikOPFTOXqly7rqx0Z1Q5BAIoZBSFihQYQOOBEdkCOgXTOHA07HAGjGWiIjaPZNW13/+lm6S9FT7rLHFJ6fQbkATOG1j2OFMucKJJsxIVfQORl+9Jyda6Sl1dUYhSCm1dyClfoeDve4qMYdLEbfqHf3O/AdDumsjAAB42mNgYoAAZQYjBmyAGYQZmdhL8zLdDEydARfoAqIAAAABAAMABwAKABMAB///AA8AAQAAAAAAAAAAAAAAAAABAAAAAA==) format("woff");
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body {
+      -ms-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%;
+      line-height: 1.5;
+      color: rgb(171, 178, 191);
+      line-height: 1.5;
+      word-wrap: break-word;
+      background: #282c34;
+      padding-top: 20px;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-c,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-c,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-c,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-c {
+      color: #6a737d;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-c1,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-s .pl-v,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-c1,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-s .pl-v,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-c1,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-s .pl-v,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-c1,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-s .pl-v {
+      color: #005cc5;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-e,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-en,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-e,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-en,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-e,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-en,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-e,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-en {
+      color: #6f42c1;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-smi,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-s .pl-s1,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-smi,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-s .pl-s1,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-smi,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-s .pl-s1,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-smi,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-s .pl-s1 {
+      color: #24292e;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-ent,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-ent,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-ent,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-ent {
+      color: #22863a;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-k,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-k,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-k,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-k {
+      color: #d73a49;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-s,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-pds,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-s .pl-pse .pl-s1,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-sr,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-sr .pl-cce,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-sr .pl-sre,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-sr .pl-sra,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-s,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-pds,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-s .pl-pse .pl-s1,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-sr,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-sr .pl-cce,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-sr .pl-sre,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-sr .pl-sra,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-s,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-pds,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-s .pl-pse .pl-s1,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-sr,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-sr .pl-cce,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-sr .pl-sre,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-sr .pl-sra,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-s,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-pds,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-s .pl-pse .pl-s1,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-sr,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-sr .pl-cce,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-sr .pl-sre,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-sr .pl-sra {
+      color: #032f62;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-v,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-smw,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-v,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-smw,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-v,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-smw,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-v,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-smw {
+      color: #e36209;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-bu,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-bu,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-bu,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-bu {
+      color: #b31d28;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-ii,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-ii,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-ii,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-ii {
+      color: #fafbfc;
+      background-color: #b31d28;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-c2,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-c2,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-c2,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-c2 {
+      color: #fafbfc;
+      background-color: #d73a49;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-c2::before,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-c2::before,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-c2::before,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-c2::before {
+      content: "^M";
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-sr .pl-cce,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-sr .pl-cce,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-sr .pl-cce,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-sr .pl-cce {
+      font-weight: bold;
+      color: #22863a;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-ml,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-ml,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-ml,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-ml {
+      color: #735c0f;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-mh,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-mh .pl-en,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-ms,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-mh,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-mh .pl-en,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-ms,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-mh,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-mh .pl-en,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-ms,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-mh,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-mh .pl-en,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-ms {
+      font-weight: bold;
+      color: #005cc5;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-mi,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-mi,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-mi,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-mi {
+      font-style: italic;
+      color: #24292e;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-mb,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-mb,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-mb,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-mb {
+      font-weight: bold;
+      color: #24292e;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-md,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-md,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-md,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-md {
+      color: #b31d28;
+      background-color: #ffeef0;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-mi1,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-mi1,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-mi1,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-mi1 {
+      color: #22863a;
+      background-color: #f0fff4;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-mc,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-mc,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-mc,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-mc {
+      color: #e36209;
+      background-color: #ffebda;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-mi2,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-mi2,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-mi2,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-mi2 {
+      color: #f6f8fa;
+      background-color: #005cc5;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-mdr,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-mdr,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-mdr,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-mdr {
+      font-weight: bold;
+      color: #6f42c1;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-ba,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-ba,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-ba,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-ba {
+      color: #586069;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-sg,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-sg,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-sg,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-sg {
+      color: #959da5;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-corl,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-corl,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-corl,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-corl {
+      text-decoration: underline;
+      color: #032f62;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .octicon,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .octicon,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .octicon,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .octicon {
+      display: inline-block;
+      vertical-align: text-top;
+      fill: currentColor;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body a,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body a,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body a,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body a {
+      background-color: transparent;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body a:active,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body a:hover,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body a:active,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body a:hover,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body a:active,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body a:hover,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body a:active,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body a:hover {
+      outline-width: 0;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body strong,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body strong,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body strong,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body strong {
+      font-weight: inherit;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body strong,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body strong,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body strong,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body strong {
+      font-weight: bolder;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h1,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h1,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h1,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h1 {
+      margin: 0.67em 0;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body img,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body img,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body img,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body img {
+      border-style: none;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body hr,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body hr,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body hr,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body hr {
+      box-sizing: content-box;
+      height: 0;
+      overflow: visible;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body input,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body input,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body input,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body input {
+      font: inherit;
+      margin: 0;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body input,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body input,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body input,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body input {
+      overflow: visible;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body [type=checkbox],
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body [type=checkbox],
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body [type=checkbox],
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body [type=checkbox] {
+      box-sizing: border-box;
+      padding: 0;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body *,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body *,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body *,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body * {
+      box-sizing: border-box;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body input,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body input,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body input,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body input {
+      font-family: inherit;
+      line-height: inherit;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body a,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body a,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body a,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body a {
+      color: #528bff;
+      text-decoration: none;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body a:hover,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body a:hover,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body a:hover,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body a:hover {
+      text-decoration: underline;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body strong,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body strong,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body strong,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body strong {
+      font-weight: 600;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body hr,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body hr,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body hr,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body hr {
+      height: 0;
+      margin: 15px 0;
+      overflow: hidden;
+      background: transparent;
+      border: 0;
+      border-bottom: 1px solid #dfe2e5;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body hr::before,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body hr::before,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body hr::before,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body hr::before {
+      display: table;
+      content: "";
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body hr::after,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body hr::after,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body hr::after,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body hr::after {
+      display: table;
+      clear: both;
+      content: "";
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body table,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body table,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body table,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body table {
+      border-spacing: 0;
+      border-collapse: collapse;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body td,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body th,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body td,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body th,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body td,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body th,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body td,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body th {
+      padding: 0;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h1,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h2,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h3,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h4,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h5,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h6,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h1,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h2,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h3,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h4,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h5,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h6,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h1,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h2,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h3,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h4,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h5,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h6,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h1,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h2,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h3,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h4,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h5,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h6 {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h1,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h1,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h1,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h1 {
+      font-weight: 600;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h2,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h2,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h2,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h2 {
+      font-weight: 600;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h3,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h3,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h3,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h3 {
+      font-weight: 600;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h4,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h4,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h4,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h4 {
+      font-weight: 600;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h5,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h5,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h5,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h5 {
+      font-weight: 600;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h6,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h6,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h6,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h6 {
+      font-weight: 600;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body p,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body p,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body p,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body p {
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body blockquote,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body blockquote,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body blockquote,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body blockquote {
+      margin: 0;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body ul,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body ol,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body ul,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body ol,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body ul,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body ol,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body ul,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body ol {
+      padding-left: 0;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body ol ol,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body ul ol,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body ol ol,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body ul ol,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body ol ol,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body ul ol,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body ol ol,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body ul ol {
+      list-style-type: lower-roman;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body ul ul ol,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body ul ol ol,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body ol ul ol,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body ol ol ol,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body ul ul ol,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body ul ol ol,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body ol ul ol,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body ol ol ol,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body ul ul ol,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body ul ol ol,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body ol ul ol,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body ol ol ol,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body ul ul ol,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body ul ol ol,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body ol ul ol,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body ol ol ol {
+      list-style-type: lower-alpha;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body dd,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body dd,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body dd,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body dd {
+      margin-left: 0;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body pre,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body pre,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body pre,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body pre {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .octicon,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .octicon,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .octicon,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .octicon {
+      vertical-align: text-bottom;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-0,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-0,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-0,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-0 {
+      padding-left: 0 !important;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-1,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-1,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-1,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-1 {
+      padding-left: 4px !important;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-2,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-2,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-2,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-2 {
+      padding-left: 8px !important;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-3,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-3,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-3,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-3 {
+      padding-left: 16px !important;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-4,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-4,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-4,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-4 {
+      padding-left: 24px !important;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-5,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-5,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-5,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-5 {
+      padding-left: 32px !important;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-6,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-6,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-6,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-6 {
+      padding-left: 40px !important;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body::before,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body::before,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body::before,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body::before {
+      display: table;
+      content: "";
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body::after,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body::after,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body::after,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body::after {
+      display: table;
+      clear: both;
+      content: "";
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body>*:first-child,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body>*:first-child,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body>*:first-child,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body>*:first-child {
+      margin-top: 0 !important;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body>*:last-child,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body>*:last-child,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body>*:last-child,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body>*:last-child {
+      margin-bottom: 0 !important;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body a:not([href]),
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body a:not([href]),
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body a:not([href]),
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body a:not([href]) {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .anchor,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .anchor,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .anchor,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .anchor {
+      float: left;
+      padding-right: 4px;
+      margin-left: -20px;
+      line-height: 1;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .anchor:focus,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .anchor:focus,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .anchor:focus,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .anchor:focus {
+      outline: none;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body p,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body blockquote,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body ul,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body ol,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body dl,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body table,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body pre,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body p,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body blockquote,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body ul,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body ol,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body dl,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body table,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body pre,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body p,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body blockquote,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body ul,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body ol,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body dl,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body table,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body pre,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body p,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body blockquote,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body ul,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body ol,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body dl,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body table,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body pre {
+      margin-top: 0;
+      margin-bottom: 16px;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body hr,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body hr,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body hr,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body hr {
+      height: 0.25em;
+      padding: 0;
+      margin: 24px 0;
+      background-color: #e1e4e8;
+      border: 0;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body blockquote,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body blockquote,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body blockquote,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body blockquote {
+      /* padding: 0 1em;
+  color: #6a737d;
+  border-left: 0.25em solid #dfe2e5; */
+      padding: 8.5px 17px;
+      margin: 1.5em 0;
+      color: #7c879c;
+      border-color: #4b5362;
+      border-width: 4px;
+      border-left: 5px solid #4b5362;
+      background: transparent;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body blockquote> :first-child,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body blockquote> :first-child,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body blockquote> :first-child,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body blockquote> :first-child {
+      margin-top: 0;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body blockquote> :last-child,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body blockquote> :last-child,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body blockquote> :last-child,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body blockquote> :last-child {
+      margin-bottom: 0;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body kbd,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body kbd,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body kbd,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body kbd {
+      display: inline-block;
+      padding: 3px 5px;
+      line-height: 10px;
+      color: #444d56;
+      vertical-align: middle;
+      background-color: #fafbfc;
+      border: solid 1px #c6cbd1;
+      border-bottom-color: #959da5;
+      border-radius: 3px;
+      box-shadow: inset 0 -1px 0 #959da5;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h1,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h2,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h3,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h4,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h5,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h6,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h1,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h2,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h3,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h4,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h5,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h6,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h1,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h2,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h3,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h4,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h5,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h6,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h1,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h2,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h3,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h4,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h5,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h6 {
+      margin-top: 24px;
+      margin-bottom: 16px;
+      font-weight: 600;
+      line-height: 1.25;
+      color: rgb(240, 240, 240);
+      border-bottom: none;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h1 .octicon-link,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h2 .octicon-link,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h3 .octicon-link,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h4 .octicon-link,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h5 .octicon-link,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h6 .octicon-link,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h1 .octicon-link,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h2 .octicon-link,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h3 .octicon-link,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h4 .octicon-link,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h5 .octicon-link,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h6 .octicon-link,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h1 .octicon-link,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h2 .octicon-link,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h3 .octicon-link,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h4 .octicon-link,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h5 .octicon-link,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h6 .octicon-link,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h1 .octicon-link,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h2 .octicon-link,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h3 .octicon-link,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h4 .octicon-link,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h5 .octicon-link,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h6 .octicon-link {
+      color: #1b1f23;
+      vertical-align: middle;
+      visibility: hidden;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h1:hover .anchor,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h2:hover .anchor,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h3:hover .anchor,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h4:hover .anchor,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h5:hover .anchor,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h6:hover .anchor,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h1:hover .anchor,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h2:hover .anchor,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h3:hover .anchor,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h4:hover .anchor,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h5:hover .anchor,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h6:hover .anchor,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h1:hover .anchor,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h2:hover .anchor,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h3:hover .anchor,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h4:hover .anchor,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h5:hover .anchor,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h6:hover .anchor,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h1:hover .anchor,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h2:hover .anchor,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h3:hover .anchor,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h4:hover .anchor,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h5:hover .anchor,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h6:hover .anchor {
+      text-decoration: none;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h1:hover .anchor .octicon-link,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h2:hover .anchor .octicon-link,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h3:hover .anchor .octicon-link,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h4:hover .anchor .octicon-link,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h5:hover .anchor .octicon-link,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h6:hover .anchor .octicon-link,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h1:hover .anchor .octicon-link,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h2:hover .anchor .octicon-link,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h3:hover .anchor .octicon-link,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h4:hover .anchor .octicon-link,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h5:hover .anchor .octicon-link,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h6:hover .anchor .octicon-link,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h1:hover .anchor .octicon-link,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h2:hover .anchor .octicon-link,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h3:hover .anchor .octicon-link,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h4:hover .anchor .octicon-link,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h5:hover .anchor .octicon-link,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h6:hover .anchor .octicon-link,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h1:hover .anchor .octicon-link,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h2:hover .anchor .octicon-link,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h3:hover .anchor .octicon-link,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h4:hover .anchor .octicon-link,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h5:hover .anchor .octicon-link,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h6:hover .anchor .octicon-link {
+      visibility: visible;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h1,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h1,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h1,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h1 {
+      padding-bottom: 0.3em;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h2,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h2,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h2,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h2 {
+      padding-bottom: 0.3em;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h6,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h6,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h6,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h6 {
+      color: #6a737d;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body ul,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body ol,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body ul,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body ol,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body ul,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body ol,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body ul,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body ol {
+      padding-left: 2em;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body ul ul,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body ul ol,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body ol ol,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body ol ul,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body ul ul,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body ul ol,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body ol ol,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body ol ul,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body ul ul,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body ul ol,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body ol ol,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body ol ul,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body ul ul,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body ul ol,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body ol ol,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body ol ul {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body li,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body li,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body li,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body li {
+      word-wrap: break-all;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body li>p,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body li>p,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body li>p,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body li>p {
+      margin-top: 16px;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body li+li,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body li+li,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body li+li,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body li+li {
+      margin-top: 0.25em;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body dl,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body dl,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body dl,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body dl {
+      padding: 0;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body dl dt,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body dl dt,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body dl dt,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body dl dt {
+      padding: 0;
+      margin-top: 16px;
+      font-style: italic;
+      font-weight: 600;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body dl dd,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body dl dd,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body dl dd,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body dl dd {
+      padding: 0 16px;
+      margin-bottom: 16px;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body table,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body table,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body table,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body table {
+      display: block;
+      width: 100%;
+      overflow: auto;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body table th,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body table th,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body table th,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body table th {
+      font-weight: 700;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body table th,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body table td,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body table th,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body table td,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body table th,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body table td,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body table th,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body table td {
+      padding: 6px 13px;
+      /* border: 1px solid #dfe2e5; */
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body img,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body img,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body img,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body img {
+      max-width: 100%;
+      box-sizing: content-box;
+      display: inline-block;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body img[align=right],
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body img[align=right],
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body img[align=right],
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body img[align=right] {
+      padding-left: 20px;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body img[align=left],
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body img[align=left],
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body img[align=left],
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body img[align=left] {
+      padding-right: 20px;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body code,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body code,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body code,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body code {
+      padding: 0.2em 0.4em;
+      margin: 0;
+      background-color: #3a3f4b;
+      border-radius: 3px;
+      color: white;
+      margin: 0 1px;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body pre,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body pre,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body pre,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body pre {
+      word-wrap: normal;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body pre>code,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body pre>code,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body pre>code,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body pre>code {
+      padding: 0;
+      margin: 0;
+      word-break: normal;
+      white-space: pre;
+      background: transparent;
+      border: 0;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .highlight,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .highlight,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .highlight,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .highlight {
+      margin-bottom: 16px;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .highlight pre,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .highlight pre,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .highlight pre,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .highlight pre {
+      margin-bottom: 0;
+      word-break: normal;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .highlight pre,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body pre,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .highlight pre,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body pre,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .highlight pre,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body pre,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .highlight pre,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body pre {
+      padding: 16px;
+      overflow: auto;
+      line-height: 1.45;
+      /* background-color: #f6f8fa; */
+      border-radius: 3px;
+      background-color: #31363f;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body pre code,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body pre code,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body pre code,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body pre code {
+      display: inline;
+      max-width: auto;
+      padding: 0;
+      margin: 0;
+      overflow: visible;
+      line-height: inherit;
+      word-wrap: normal;
+      background-color: transparent;
+      border: 0;
+      color: rgb(171, 178, 191);
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .full-commit .btn-outline:not(:disabled):hover,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .full-commit .btn-outline:not(:disabled):hover,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .full-commit .btn-outline:not(:disabled):hover,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .full-commit .btn-outline:not(:disabled):hover {
+      color: #005cc5;
+      border-color: #005cc5;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body kbd,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body kbd,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body kbd,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body kbd {
+      display: inline-block;
+      padding: 3px 5px;
+      line-height: 10px;
+      color: #444d56;
+      vertical-align: middle;
+      background-color: #fafbfc;
+      border: solid 1px #d1d5da;
+      border-bottom-color: #c6cbd1;
+      border-radius: 3px;
+      box-shadow: inset 0 -1px 0 #c6cbd1;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body :checked+.radio-label,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body :checked+.radio-label,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body :checked+.radio-label,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body :checked+.radio-label {
+      position: relative;
+      z-index: 1;
+      border-color: #0366d6;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .task-list-item,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .task-list-item,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .task-list-item,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .task-list-item {
+      list-style-type: none;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .task-list-item+.task-list-item,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .task-list-item+.task-list-item,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .task-list-item+.task-list-item,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .task-list-item+.task-list-item {
+      margin-top: 3px;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .task-list-item input,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .task-list-item input,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .task-list-item input,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .task-list-item input {
+      margin: 0 0.2em 0.25em -1.6em;
+      vertical-align: middle;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body hr,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body hr,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body hr,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body hr {
+      border-bottom-color: #eee;
+    }
+
+    /*
+
+Atom One Dark by Daniel Gamage
+Original One Dark Syntax theme from https://github.com/atom/one-dark-syntax
+
+base:    #282c34
+mono-1:  #abb2bf
+mono-2:  #818896
+mono-3:  #5c6370
+hue-1:   #56b6c2
+hue-2:   #61aeee
+hue-3:   #c678dd
+hue-4:   #98c379
+hue-5:   #e06c75
+hue-5-2: #be5046
+hue-6:   #d19a66
+hue-6-2: #e6c07b
+
+*/
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs {
+      display: block;
+      overflow-x: auto;
+      padding: 0.5em;
+      color: #abb2bf;
+      background: #282c34;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-comment,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-quote,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-comment,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-quote,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-comment,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-quote,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-comment,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-quote {
+      color: #5c6370;
+      font-style: italic;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-doctag,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-keyword,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-formula,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-doctag,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-keyword,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-formula,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-doctag,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-keyword,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-formula,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-doctag,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-keyword,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-formula {
+      color: #c678dd;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-section,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-name,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-selector-tag,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-deletion,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-subst,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-section,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-name,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-selector-tag,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-deletion,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-subst,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-section,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-name,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-selector-tag,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-deletion,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-subst,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-section,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-name,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-selector-tag,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-deletion,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-subst {
+      color: #e06c75;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-literal,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-literal,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-literal,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-literal {
+      color: #56b6c2;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-string,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-regexp,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-addition,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-attribute,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-meta-string,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-string,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-regexp,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-addition,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-attribute,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-meta-string,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-string,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-regexp,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-addition,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-attribute,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-meta-string,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-string,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-regexp,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-addition,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-attribute,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-meta-string {
+      color: #98c379;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-built_in,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-class .hljs-title,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-built_in,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-class .hljs-title,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-built_in,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-class .hljs-title,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-built_in,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-class .hljs-title {
+      color: #e6c07b;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-attr,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-variable,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-template-variable,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-type,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-selector-class,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-selector-attr,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-selector-pseudo,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-number,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-attr,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-variable,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-template-variable,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-type,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-selector-class,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-selector-attr,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-selector-pseudo,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-number,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-attr,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-variable,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-template-variable,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-type,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-selector-class,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-selector-attr,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-selector-pseudo,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-number,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-attr,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-variable,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-template-variable,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-type,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-selector-class,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-selector-attr,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-selector-pseudo,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-number {
+      color: #d19a66;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-symbol,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-bullet,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-link,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-meta,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-selector-id,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-title,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-symbol,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-bullet,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-link,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-meta,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-selector-id,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-title,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-symbol,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-bullet,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-link,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-meta,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-selector-id,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-title,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-symbol,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-bullet,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-link,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-meta,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-selector-id,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-title {
+      color: #61aeee;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-emphasis,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-emphasis,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-emphasis,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-emphasis {
+      font-style: italic;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-strong,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-strong,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-strong,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-strong {
+      font-weight: bold;
+    }
+
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-link,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-link,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-link,
+    .vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-link {
+      text-decoration: underline;
+    }
+  </style>
+
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+  </style>
+  <style>
+    .task-list-item {
+      list-style-type: none;
+    }
+
+    .task-list-item-checkbox {
+      margin-left: -20px;
+      vertical-align: middle;
+      pointer-events: none;
+    }
+  </style>
+  <style>
+    :root {
+      --color-note: #0969da;
+      --color-tip: #1a7f37;
+      --color-warning: #9a6700;
+      --color-severe: #bc4c00;
+      --color-caution: #d1242f;
+      --color-important: #8250df;
+    }
+  </style>
+  <style>
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --color-note: #2f81f7;
+        --color-tip: #3fb950;
+        --color-warning: #d29922;
+        --color-severe: #db6d28;
+        --color-caution: #f85149;
+        --color-important: #a371f7;
+      }
+    }
+  </style>
+  <style>
+    .markdown-alert {
+      padding: 0.5rem 1rem;
+      margin-bottom: 16px;
+      color: inherit;
+      border-left: .25em solid #888;
+    }
+
+    .markdown-alert>:first-child {
+      margin-top: 0
+    }
+
+    .markdown-alert>:last-child {
+      margin-bottom: 0
+    }
+
+    .markdown-alert .markdown-alert-title {
+      display: flex;
+      font-weight: 500;
+      align-items: center;
+      line-height: 1
+    }
+
+    .markdown-alert .markdown-alert-title .octicon {
+      margin-right: 0.5rem;
+      display: inline-block;
+      overflow: visible !important;
+      vertical-align: text-bottom;
+      fill: currentColor;
+    }
+
+    .markdown-alert.markdown-alert-note {
+      border-left-color: var(--color-note);
+    }
+
+    .markdown-alert.markdown-alert-note .markdown-alert-title {
+      color: var(--color-note);
+    }
+
+    .markdown-alert.markdown-alert-important {
+      border-left-color: var(--color-important);
+    }
+
+    .markdown-alert.markdown-alert-important .markdown-alert-title {
+      color: var(--color-important);
+    }
+
+    .markdown-alert.markdown-alert-warning {
+      border-left-color: var(--color-warning);
+    }
+
+    .markdown-alert.markdown-alert-warning .markdown-alert-title {
+      color: var(--color-warning);
+    }
+
+    .markdown-alert.markdown-alert-tip {
+      border-left-color: var(--color-tip);
+    }
+
+    .markdown-alert.markdown-alert-tip .markdown-alert-title {
+      color: var(--color-tip);
+    }
+
+    .markdown-alert.markdown-alert-caution {
+      border-left-color: var(--color-caution);
+    }
+
+    .markdown-alert.markdown-alert-caution .markdown-alert-title {
+      color: var(--color-caution);
+    }
+  </style>
+
+</head>
+
+<body class="vscode-body vscode-light">
+  <h1 id="web前端笔记">Web前端笔记</h1>
+  <h2 id="html">HTML</h2>
+  <p>HTML 指的是<strong>超文本标记语言</strong>：<em>HyperText Markup Language</em>，属于一种<strong>标记语言</strong>，即是一套标记标签</p>
+  <p>HTML 用<strong>标记标签</strong>来描述网页</p>
+  <p>HTML 文档包含了 HTML 标签以及文本内容，也称作<strong>Web 页面</strong></p>
+  <h3 id="html基本结构">HTML基本结构</h3>
+  <p><img src="images/postWeb/pic1.png" alt="基本结构"></p>
+  <ul>
+    <li><code>&lt;!DOCTYPE html&gt;</code> 声明为 HTML5 文档</li>
+    <li><code>&lt;html&gt;</code> 元素是 HTML 页面的根元素</li>
+    <li><code>&lt;head&gt;</code> 元素包含了文档的元（<strong>meta</strong>）数据，如
+      <code>&lt;meta charset=&quot;utf-8&quot;&gt;</code> 定义网页编码格式为 <em>utf-8</em></li>
+    <li><code>&lt;title&gt;</code> 元素描述了文档的标题</li>
+    <li><code>&lt;body&gt;</code> 元素包含了可见的页面内容（仅在该范围内的内容可见）</li>
+    <li><code>&lt;h1&gt;</code> 元素定义一个大标题</li>
+    <li><code>&lt;p&gt;</code> 元素定义一个段落</li>
+  </ul>
+  <p>在浏览器中键入<code>F12</code>按键开启调试模式</p>
+  <h3 id="html标签">HTML标签</h3>
+  <ul>
+    <li>HTML 标签是由<strong>尖括号</strong>包围的关键词，比如 <code>&lt;html&gt;</code></li>
+    <li>HTML 标签通常是<strong>成对</strong>出现的，比如 <code>&lt;b&gt;</code> 和 <code>&lt;/b&gt;</code></li>
+    <li>标签对中的第一个标签是开始标签，第二个标签是结束标签</li>
+  </ul>
+  <blockquote>
+    <p><code>&lt;标签&gt;内容&lt;/标签&gt;</code></p>
+  </blockquote>
+  <p><a href="#html%E6%A0%87%E7%AD%BE%E9%99%84%E5%BD%95">附录：HTML标签（附录）</a></p>
+  <h3 id="html元素">HTML元素</h3>
+  <p>HTML元素包括了开始标签和结束标签</p>
+  <ul>
+    <li>HTML元素以<strong>开始标签</strong>起始，以<strong>结束标签</strong>终止</li>
+    <li><strong>元素的内容</strong>是开始标签和结束标签之间的内容</li>
+    <li>某些HTML元素具有<strong>空内容</strong></li>
+    <li>空元素（没有内容的HTML元素）在开始标签中进行关闭</li>
+    <li>大多HTML元素拥有<strong>属性</strong></li>
+    <li>HTML元素之间可以<strong>嵌套</strong></li>
+  </ul>
+  <h3 id="html属性">HTML属性</h3>
+  <ul>
+    <li>HTML 元素可以设置<strong>属性</strong></li>
+    <li>属性可以在元素中添加<strong>附加信息</strong></li>
+    <li>属性一般描述于<strong>开始标签</strong></li>
+    <li>属性总是以名称/值对的形式出现，比如：<code>name=&quot;value&quot;</code>，属性值应该始终在引号内，如果属性值本身含有双引号，则必须使用单引号</li>
+  </ul>
+  <h3 id="html基础">HTML基础</h3>
+  <ul>
+    <li><code>&lt;h1&gt;-&lt;h6&gt;</code>标签定义<strong>标题</strong></li>
+    <li><code>&lt;p&gt;</code>标签定义<strong>段落</strong></li>
+    <li><code>&lt;a href=&quot;URL&quot;&gt;</code>标签定义<strong>链接</strong></li>
+    <li><code>&lt;img src=&quot;URL&quot; width=&quot;~&quot; hight=&quot;~&quot;&gt;</code>标签定义<strong>图像</strong></li>
+    <li><code>&lt;hr&gt;</code>创建<strong>水平线</strong></li>
+    <li><code>&lt;!-- --&gt;</code>创建<strong>注释</strong></li>
+    <li><code>&lt;br\&gt;</code>作为<strong>换行符</strong></li>
+  </ul>
+  <h3 id="html链接">HTML链接</h3>
+  <p><code>&lt;a&gt;</code>（锚）元素常用来创建链接</p>
+  <h4 id="html链接元素属性">HTML链接元素属性</h4>
+  <p><strong>href</strong>：是链接最重要的属性，用于<strong>指定链接目标</strong>的URL可以是另一个网页的URL、文件的URL或者是其他资源的URL</p>
+  <p><strong>target</strong>：指定链接如何在浏览器中打开
+    <code>_blank</code>为值时为在新标签页、窗口打开链接
+    <code>_self</code>为值时在当前标签页或窗口打开链接
+  </p>
+  <p>
+    <strong>id</strong>：使用id属性可用于创建一个HTML文档书签可以在<strong>href</strong>属性值中的URL的末端加上<code>#(id)</code>(无空格)跳转到指定位置，如果是对本链接则可以直接使用<code>#(id)</code>
+  </p>
+  <h4 id="html链接类型">HTML链接类型</h4>
+  <p><strong>文本链接</strong>：可以在<code>&lt;a&gt;</code>的开始和结束标签内填入内容作为文本链接</p>
+  <p><strong>图像链接</strong>：可以在<code>&lt;a&gt;</code>的开始和结束标签内插入图片</p>
+  <pre><code>&lt;a href=&quot;~&quot;&gt;
+    &lt;img src=&quot;~&quot; alt=&quot;~&quot;&gt;
+&lt;/a&gt;
+</code></pre>
+  <p><strong>锚点链接</strong>：在同一页面内创建内部链接，需要在目标位置使用<code>&lt;a&gt;</code>元素定义一个标记，并使用#符号引用该标记</p>
+  <pre><code>&lt;a href=&quot;#section2&quot;&gt;跳转到第二部分&lt;/a&gt;
+&lt;!-- 在页面中的某个位置 --&gt;
+&lt;a name=&quot;section2&quot;&gt;&lt;/a&gt;
+</code></pre>
+  <p><strong>下载链接</strong>：使用download属性</p>
+  <pre><code>&lt;a href=&quot;document.pdf&quot; download&gt;下载文档&lt;/a&gt;
+</code></pre>
+  <h3 id="html头部">HTML头部</h3>
+  <p><code>&lt;head&gt;</code>元素中包含了所有的头部标签元素在<code>&lt;head&gt;</code>元素中插入脚本（scripts）和样式文件（CSS），以及各种meta信息</p>
+  <h4 id="html头部元素标签">HTML头部元素标签</h4>
+  <p><code>&lt;title&gt;</code>：定义了不同文档的标题</p>
+  <p><code>&lt;base&gt;</code>：描述了基础的链接地址/链接目标，作为HTML文档中所有的链接标签的默认链接</p>
+  <p><code>&lt;**link&gt;</code>****：定义了文档和外部资源的关系，通常用 - 正常，未访问过的于链接到外部样式表
+    其中**</p>
+  <ul>
+    <li>用户已访问过的链接*<code>&lt;styl**e&gt;</code>：定义了HTML文档的样式文件引用地址</li>
+  </ul>
+  <pre><code class="language--">**&lt;head&gt;**
+    &lt;style type=&quot;&quot;- 链接被电极
+        body{
+            background-color:yellow;
+        }
+    &lt;/styl**e&gt;
+&lt;/head&gt;
+</code></pre>
+  <p><code>&lt;meta&gt;</code>：描述了一些基本的元数据通常用于指定网页的描述，关键词，文件的最后修改时间，坐着，和其他元数据</p>
+  <pre><code>&lt;!--为搜索引擎定义关键词：--&gt;
+&lt;meta name=&quot;keywords&quot; content=&quot;HTML, CSS, XML, XHTML, JavaScript&quot;&gt;
+
+&lt;!-- 为网页定义描述内容: --&gt;
+&lt;meta name=&quot;description&quot; content=&quot;免费 Web &amp; 编程 教程&quot;&gt;
+
+&lt;!-- 定义网页作者: --&gt;
+&lt;meta name=&quot;author&quot; content=&quot;Runoob&quot;&gt;
+
+&lt;!-- 每30秒钟刷新当前页面: --&gt;
+&lt;meta http-equiv=&quot;refresh&quot; content=&quot;30&quot;&gt;
+</code></pre>
+  <p><code>&lt;script&gt;</code>：标签用于加载脚本文件</p>
+  <h3 id="html图像">HTML图像</h3>
+  <p>在HTML里面由<code>&lt;img&gt;</code>来定义图像<code>&lt;img&gt;</code>是空标签，它只包含属性，并且没有闭合标签
+    图像的URL作为值填入源属性<strong>src</strong>（source）里面</p>
+  <h4 id="html图像元素属性">HTML图像元素属性</h4>
+  <p><strong>src</strong>：指source，值为图像的ULR</p>
+  <p><strong>alt</strong>：当图像无法载入的时候，将图像替换成文本属性同时显示该属性值</p>
+  <p><strong>width,height</strong>：用于设置图像的高度和宽度，如果仅设置其中一项，则会将图片等比例缩放，直到图像的宽/高值与设定值相同FF</p>
+  <h3 id="html表格">HTML表格</h3>
+  <p>在HTML里面由<code>&lt;table&gt;</code>来定义表格</p>
+  <h4 id="html表格标签">HTML表格标签</h4>
+  <ul>
+    <li><code>&lt;thead&gt;</code>用于定义表格的标题部分F</li>
+    <li>每个表格均有若干列表头（<code>&lt;th&gt;</code>标签定义表头单元格-<strong>table header</strong>） //
+      <code>&lt;th&gt;</code>标签内文本自带粗体居中属性</li>
+    <li><code>&lt;tbody&gt;</code>用于定义表格的主体部分</li>
+    <li>每个表格均有若干行（<code>&lt;tr&gt;</code>标签定义行-<strong>table row</strong>）</li>
+    <li>每行被分割成若干个单元格（<code>&lt;td&gt;</code>标签定义数据单元格-<strong>table data</strong>）</li>
+    <li><code>&lt;caption&gt;</code>作为表格标题</li>
+  </ul>
+  <pre><code>&lt;!-- 表格实例 --&gt;
+&lt;table&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;列标题1&lt;/th&gt;
+            &lt;th&gt;列标题2&lt;/th&gt;
+            &lt;th&gt;列标题3&lt;/th&gt;
+            &lt;th&gt;列标题4&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;th&gt;行标题1&lt;/th&gt;
+            &lt;td&gt;行1，列2&lt;/td&gt;
+            &lt;td&gt;行1，列3&lt;/td&gt;
+            &lt;td&gt;行1，列4&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;行标题2&lt;/th&gt;
+            &lt;td&gt;行2，列2&lt;/td&gt;
+            &lt;td&gt;行2，列3&lt;/td&gt;
+            &lt;td&gt;行2，列4&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>
+  <table>
+    <thead>
+      <tr>
+        <th>列标题1</th>
+        <th>列标题2</th>
+        <th>列标题3</th>
+        <th>列标题4</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>行标题1</th>
+        <td>行1，列2</td>
+        <td>行1，列3</td>
+        <td>行1，列4</td>
+      </tr>
+      <tr>
+        <th>行标题2</th>
+        <td>行2，列2</td>
+        <td>行2，列3</td>
+        <td>行2，列4</td>
+      </tr>
+    </tbody>
+  </table>
+  <h4 id="html表格属性">HTML表格属性</h4>
+  <p><strong>border</strong>：<code>&lt;table&gt;</code>中的边框属性，赋值大小为边框外围的宽度</p>
+  <p><strong>cellpadding</strong>：<code>&lt;table&gt;</code>中的属性，用于设置单元格边距（单元格大小）</p>
+  <p><strong>cellspacing</strong>：<code>&lt;table&gt;</code>中的属性，用于设置单元格间距，默认为1</p>
+  <p><strong>colspan</strong>：<code>&lt;th&gt;</code>、<code>&lt;td&gt;</code>中的属性，用于实现单元格跨列效果</p>
+  <p><strong>rowspan</strong>：<code>&lt;th&gt;</code>、<code>&lt;td&gt;</code>中的属性，用于实现单元格跨行效果</p>
+  <h3 id="html列表">HTML列表</h3>
+  <p>HTML列表分为无序列表<code>&lt;ul&gt;</code>和有序列表<code>&lt;ol&gt;</code>，两种列表中都有由<code>&lt;li&gt;</code>定义的列表项</p>
+  <p>有序列表<code>&lt;ol&gt;</code>和无序列表<code>&lt;ul&gt;</code>之间可以相互嵌套</p>
+  <p>自定义列表使用<code>&lt;dl&gt;</code>作为自定义列表的标志，<code>&lt;dt&gt;</code>作为自定义列表的项，<code>&lt;dd&gt;</code>作为自定义列表中项的描述</p>
+  <h4 id="html列表属性">HTML列表属性</h4>
+  <p><strong>type</strong>（<code>&lt;ol&gt;</code>）：有序列表序号随着赋值而改变<strong>A, a, I,
+      i</strong>，依次为大写字母列表、小写字母列表、罗马数字列表、小写罗马数字列表</p>
+  <p><strong>style=&quot;list-style-type:&quot;</strong> (<code>&lt;ul&gt;</code>)：无序列表序号随着英文冒号后赋值而改变<strong>disc,
+      circle, square</strong>，依次为实心圆列表、空心圆列表、正方形列表</p>
+  <h3 id="html区块元素和内联元素">HTML区块元素和内联元素</h3>
+  <p>大多数HTML元素被定义为<strong>区块元素</strong>或<strong>内联元素</strong></p>
+  <h4 id="html区块元素">HTML区块元素</h4>
+  <p><strong>区块元素</strong>在浏览器显示的时候通常会以新行来开始或结束
+    如<code>&lt;h1&gt;</code>、<code>&lt;p&gt;</code>、<code>&lt;ul&gt;</code>、<code>&lt;table&gt;</code></p>
+  <p><code>&lt;div&gt;</code>是块级元素，可用于作为组合其他HTML元素的<strong>容器</strong>，该元素没有特定含义，如果和CSS一起使用，可以对大的内容块设置样式属性
+    其次可以用于<strong>文档布局</strong></p>
+  <h4 id="html内联元素">HTML内联元素</h4>
+  <p><strong>内联元素</strong>在显示时通常不会以新行开始
+    如<code>&lt;b&gt;</code>、<code>&lt;td&gt;</code>、<code>&lt;a&gt;</code>、<code>&lt;img&gt;</code></p>
+  <p><code>&lt;span&gt;</code>是内联元素，可用作文本的容器，也没有特定含义，在和CSS一同使用时，可以用于为部分文本设置样式属性</p>
+  <h3 id="html布局">HTML布局</h3>
+  <p>可以使用<code>&lt;div&gt;</code>进行HTML布局
+    使用属性<code>float:left/right</code>来控制区块的浮动属性</p>
+  <h3 id="html表单和输入">HTML表单和输入</h3>
+  <p>HTML表单用于收集用户的输入信息
+    表单用于表示文档中的一个区域，此区域包涵<strong>交互控件</strong>，将信息发送到Web服务器</p>
+  <p>HTML表单包涵各种输入字段、复选框、单选按钮、下拉列表等元素</p>
+  <ul>
+    <li>
+      <p>
+        <code>&lt;form&gt;</code>元素用于创建表单，<strong>action</strong>属性定义了表单数据提交的目标URL，<strong>method</strong>属性定义了提交数据和HTTP方法
+      </p>
+    </li>
+    <li>
+      <p><code>&lt;label&gt;</code>元素用于为表单添加标签，提高文件可读性，便于区分表单内不同的输入内容</p>
+    </li>
+    <li>
+      <p>
+        <code>&lt;input&gt;</code>元素用于创建文本输入框、密码框、单选按钮、复选框等。<strong>type</strong>属性定义了输入框的类型，<strong>id</strong>属性用于关联<code>&lt;label&gt;</code>元素，<strong>name</strong>属性用于标识表单字段
+      </p>
+    </li>
+  </ul>
+  <h4 id="html表单">HTML表单</h4>
+  <p>表单是一个包含表单元素的区域。
+    表单是允许问用户在表单输入内容，比如：文本域（<strong>textarea</strong>）、下拉列表（<strong>select</strong>）、单选框（<strong>radio-buuttons</strong>）、复选框（<strong>checkbox</strong>）等等
+  </p>
+  <h5 id="输入元素">输入元素</h5>
+  <p>使用标签<code>&lt;input&gt;</code>，输入的类型是由填入的<strong>type</strong>属性决定
+    可以通过给<code>&lt;input style=&quot;border: 2px dashed #ccc&quot;&gt;</code>将文本框设置为虚线
+    通过给<code>value</code>赋值从而显示初始文本在输入框中
+    <code>placeholder</code>可以当用户输入时候，自动清除原本占位文字
+  </p>
+  <h6 id="文本域text-fields">文本域（Text Fields）</h6>
+  <p>通过给<strong>type</strong>赋值&quot;<strong>text</strong>&quot;来实现</p>
+  <pre><code>&lt;form&gt;
+    &lt;label for=&quot;name&quot;&gt;Name:&lt;/label&gt;
+    &lt;input type=&quot;text&quot; id=&quot;name&quot; name=&quot;name&quot;&gt;
+    &lt;!-- &quot;name&quot;属性仅用于标记该元素，不显示 --&gt;
+&lt;/form&gt;
+</code></pre>
+  <h6 id="密码字段password">密码字段（Password）</h6>
+  <p>通过给<strong>type</strong>赋值&quot;<strong>password</strong>&quot;来定义
+    输入字符不会明文显示，而是使用<b>*</b>或<b>.</b>代替</p>
+  <pre><code>&lt;form&gt;
+    &lt;label for=&quot;password&quot;&gt;Password:&lt;/label&gt;
+    &lt;input type=&quot;password&quot; name=&quot;pwd&quot;&gt;
+&lt;/form&gt;
+</code></pre>
+  <h6 id="单选按钮radio-buttons">单选按钮（Radio Buttons）</h6>
+  <p>通过给<strong>type</strong>赋值&quot;<strong>radio</strong>&quot;来定义
+    使用<strong>checked</strong>来初始化</p>
+  <pre><code>&lt;form&gt;
+    &lt;input type=&quot;radio&quot; name=&quot;gender&quot; value=&quot;male&quot;&gt;男&lt;br/&gt;
+    &lt;input type=&quot;radio&quot; name=&quot;gender&quot; value=&quot;female&quot;&gt;女
+&lt;/form&gt;
+</code></pre>
+  <h6 id="复选框checkboxes">复选框（Checkboxes）</h6>
+  <p>通过给<strong>type</strong>赋值&quot;<strong>checkbox</strong>&quot;来定义</p>
+  <pre><code>&lt;form&gt;
+    &lt;input type=&quot;checkbox&quot; name=&quot;vehcle&quot; value=&quot;Bike&quot;&gt;单车&lt;br/&gt;
+    &lt;input type=&quot;checkbox&quot; name=&quot;vehcle&quot; value=&quot;Car&quot;&gt;小汽车
+&lt;/form&gt;
+</code></pre>
+  <h6 id="提交按钮submit">提交按钮（Submit）</h6>
+  <p>通过给<strong>type</strong>赋值&quot;<strong>sumbit</strong>&quot;来定义</p>
+  <p>需要注意，<code>&lt;form&gt;</code>的属性<strong>action</strong>必须给出给传出数据至的文件地址，<strong>method</strong>的属性值有两种</p>
+  <ul>
+    <li>&quot;<strong>post</strong>&quot;:指的是HTTP POST方法，表单数据会包含在表单体内然后发送给服务器，用于提交敏感数据，如用户名与密码等</li>
+    <li>&quot;<strong>get</strong>&quot;:此为默认值，指的是HTTP
+      GET方法，表单数据恢复加在<strong>action</strong>属性的URL中，并且以<b>?</b>作为分割符，主要用于不敏感信息，如分页等。！！！使用<strong>name</strong>属性作为区分</li>
+  </ul>
+  <pre><code>&lt;form name=&quot;input_1&quot; action=&quot;~URL&quot; method=&quot;get&quot;&gt;
+    &lt;label&gt;Username:&lt;/label&gt;
+    &lt;input type=&quot;text&quot; name=&quot;user&quot;&gt;
+    &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;&lt;!-- Submit按钮 --&gt;
+&lt;/form&gt;
+</code></pre>
+  <h6 id="重置按钮reset">重置按钮（reset）</h6>
+  <p>通过给<strong>type</strong>赋值<strong>reset</strong>来定义
+    清除表单内的已输入内容</p>
+  <h5 id="下拉列表">下拉列表</h5>
+  <ul>
+    <li><code>&lt;select&gt;</code>元素用于创建下拉列表，而<code>&lt;option&gt;</code>元素用于定义下拉列表中的选项</li>
+  </ul>
+  <pre><code>&lt;label&gt;conutry:&lt;/label&gt;
+&lt;select id=&quot;country&quot; name=&quot;country&quot;&gt;
+    &lt;option value=&quot;cn&quot;&gt;CN&lt;/option&gt;    
+    &lt;option value=&quot;usa&quot;&gt;USA&lt;/option&gt;    
+    &lt;option value=&quot;uk&quot;&gt;UK&lt;/option&gt;    
+&lt;/select&gt;
+</code></pre>
+  <h3 id="html颜色颜色名颜色值">HTML颜色/颜色名/颜色值</h3>
+  <h4 id="颜色值">颜色值</h4>
+  <p>HTML颜色由一个<strong>十六进制</strong>符号用来定义，分别代表红色、绿色、蓝色的值组成（RGB）
+    每种颜色最小值是0（#00），最大值是255（#FF）</p>
+  <h4 id="颜色名">颜色名</h4>
+  <p>通过使用颜色名字单词，给目标提供标准色</p>
+  <h3 id="html脚本">HTML脚本</h3>
+  <p>HTML<code>&lt;script&gt;</code>标签用于定义客户端脚本，既可以包含脚本语句，也可以通过<strong>src</strong>属性指向外部脚本文件</p>
+  <p>HTML<code>&lt;noscript&gt;</code>标签提供无法使用脚本时的替代内容</p>
+  <h3 id="html字符实体">HTML字符实体</h3>
+  <h4 id="html实体">HTML实体</h4>
+  <p>对于某些预留字符，如<code>&lt;</code>、<code>&gt;</code>等字符时，需要使用字符实体用于替换</p>
+  <p>常用的字符实体为不间断空格<code>&amp;nbsp;</code>，水平制表符<code>&amp;#09</code></p>
+  <h3 id="html统一资源定位器url">HTML统一资源定位器（URL）</h3>
+  <p><code>scheme://host.domain:port/path/filename</code></p>
+  <ul>
+    <li><code>scheme</code> - 定义因特网服务的类型。最常见的类型是 http</li>
+    <li><code>host</code> - 定义域主机（http 的默认主机是 www）</li>
+    <li><code>domain</code> - 定义因特网域名，比如 <a href="http://runoob.com">runoob.com</a></li>
+    <li><code>:port</code> - 定义主机上的端口号（http 的默认端口号是 80）</li>
+    <li><code>path</code> - 定义服务器上的路径（如果省略，则文档必须位于网站的根目录中）。</li>
+    <li><code>filename</code> - 定义文档/资源的名称</li>
+  </ul>
+  <h2 id="css">CSS</h2>
+  <h3 id="css简介">CSS简介</h3>
+  <ul>
+    <li>CSS是指层叠样式表（Cascading Style Sheets）</li>
+    <li>样式定义<strong>如何显示</strong>HTML元素</li>
+    <li>样式通常储存在<strong>样式表</strong>中</li>
+    <li>使用<strong>外部样式表</strong>可以极大提高工作效率</li>
+    <li>外部样式表通常储存在<strong>CSS文件</strong>中</li>
+    <li>多个样式表可以<strong>层叠为一个</strong></li>
+  </ul>
+  <h3 id="css语法">CSS语法</h3>
+  <p><img src="images/postWeb/pic2.jpg" alt="语法结构"></p>
+  <ul>
+    <li>选择器指向要改变样式的HTML元素</li>
+    <li>使用花括号<code>{}</code>把声明括起来</li>
+    <li>每条声明由一个属性和一个值组成，之间用冒号<code>:</code>分开，声明以分号<code>;</code>为结尾</li>
+    <li>CSS注释以<code>/*</code>开始，以<code>*/</code>结束</li>
+  </ul>
+  <h3 id="id和class选择器">id和class选择器</h3>
+  <ul>
+    <li>id选择器：使用<code>#</code>来选择特定id的元素，id值互异，相同id值的元素不能在HTML文件中共存</li>
+    <li>class选择器：使用<code>.</code>来选择特定class的元素，用来描述一组元素</li>
+  </ul>
+  <h3 id="css创建">CSS创建</h3>
+  <p>插入样式表的方法有三种：</p>
+  <ol>
+    <li>外部样式表</li>
+    <li>内部样式表</li>
+    <li>内联样式</li>
+  </ol>
+  <h4 id="外部样式表">外部样式表</h4>
+  <p>若样式需要应用于很多页面时，首选外部样式表
+    可以通过从外部引入文件，改变该文件来改变整个站点的外观
+    每个**页面使用<code>&lt;**link&gt;</code>标签来连接到样式表</p>
+  <ul>
+    <li>
+      <ul>
+        <li>正常，未访问过的链接*</li>
+      </ul>
+    </li>
+  </ul>
+  <pre><code>&lt;head&gt; - 用户已访问过的链接
+ - 正未访问过的链接**  ** ** &lt;lin**k re&quot;stylesheet&quot; type=&quot;tex - 当用户鼠标放在链接上时tss&quot; href=&quot;URL.css&quot;&gt;
+**&lt;/*ead****&gt;** - 用户已访问过的链接
+</code></pre>
+  <p>** 当用户鼠标放在链接上时
+    **#### 内部样式表
+    *- 链接被电极
+    直接在<code>&lt;head&gt;</code>标签中的<code>&lt;style&gt;</code>中定义内部样式表</p>
+  <h4 id="内联样式">内联样式</h4>
+  <p>直接在对应元素标签后<code>style</code>属性中加入对应值</p>
+  <h3 id="多重样式优先级">多重样式优先级</h3>
+  <p>优先级：
+    <strong>内联样式 &gt; 内部样式 &gt; 外部样式</strong>
+  </p>
+  <p><strong>如果外部样式放在内部样式后面，则外部样式将覆盖内部样式</strong></p>
+  <h3 id="css背景">CSS背景</h3>
+  <h4 id="背景颜色">背景颜色</h4>
+  <p><code>background-color:</code>属性定义了元素的背景颜色</p>
+  <p>颜色值有以下三种方式定义：</p>
+  <ul>
+    <li>
+      <p><strong>十六进制</strong>：&quot;#ff0000&quot;</p>
+    </li>
+    <li>
+      <p><strong>RGB</strong>:RGB(255,0,0)</p>
+    </li>
+    <li>
+      <p><strong>颜色单词</strong>:&quot;red&quot;</p>
+    </li>
+  </ul>
+  <h4 id="背景图像">背景图像</h4>
+  <p><code>background-image:url('#')</code>属性描述了元素的背景图像</p>
+  <p><strong>默认情况</strong>，背景图像将进行<strong>平铺重复显示</strong>，以覆盖整个元素实体</p>
+  <ul>
+    <li>
+      <p>
+        <code>background-repeat:repeat-x/repeat-y</code>：可以设置图像仅在水平方向（<strong>repeat-x</strong>）/竖直方向（<strong>repeat-y</strong>）平铺
+      </p>
+    </li>
+    <li>
+      <p><code>background-repeat:no-repeat</code>：可以设置图像不平铺</p>
+    </li>
+    <li>
+      <p><code>background-postion:</code>属性描述了图像的位置</p>
+    </li>
+  </ul>
+  <h3 id="css文本格式">CSS文本格式</h3>
+  <h4 id="文本颜色">文本颜色</h4>
+  <p><code>color:</code>中使用<a href="#%E8%83%8C%E6%99%AF%E9%A2%9C%E8%89%B2">三种之一的方式</a>填入即可</p>
+  <h4 id="文本的对齐方式">文本的对齐方式</h4>
+  <p><code>text-align:</code>居中（<strong>center</strong>）、对齐到左（<strong>left</strong>）、对齐到右（<strong>right</strong>）
+    当设置为（<strong>justify</strong>）时每一行被展开为宽度相等，左、右外边距是对齐的</p>
+  <h4 id="文本修饰">文本修饰</h4>
+  <p><code>text-decoration</code>属性用来设置或删除文本的装饰（<strong>删除链接的下划线</strong>）</p>
+  <h4 id="文本转换">文本转换</h4>
+  <p>
+    <code>text-transform</code>属性用来指定文本中的字母大小写，全大写（<strong>uppercase</strong>）、全小写（<strong>lowercase</strong>）、每个单词的首字母大写（<strong>capitalize</strong>）
+  </p>
+  <h4 id="文本缩进">文本缩进</h4>
+  <p><code>text-indent</code>属性用来指定文本的第一行的缩进，单位可为&quot;<strong>px</strong>&quot;</p>
+  <h3 id="css字体">CSS字体</h3>
+  <h4 id="字型">字型</h4>
+  <p>在CSS中，有两种类型的字体系列名称：</p>
+  <ul>
+    <li>
+      <p><strong>通用字体系列</strong>：同有相似外观的字体系统组合</p>
+    </li>
+    <li>
+      <p><strong>特定字体系列</strong>：一个特定的字体系列</p>
+    </li>
+  </ul>
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align:left">Generic family</th>
+        <th style="text-align:center">字体系列</th>
+        <th style="text-align:left">说明</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align:left">Serif</td>
+        <td style="text-align:center">Times New<br>Roman<br>Georgia</td>
+        <td style="text-align:left">Serif字体在字符的行的末端有额外的装饰</td>
+      </tr>
+      <tr>
+        <td style="text-align:left">Sans-serif</td>
+        <td style="text-align:center">Arial<br>Verdana</td>
+        <td style="text-align:left">&quot;Sans&quot;是指无-这些字体在末端没有额外的装饰</td>
+      </tr>
+      <tr>
+        <td style="text-align:left">Monospace</td>
+        <td style="text-align:center">Courier New<br>Lucida<br>Console</td>
+        <td style="text-align:left">所有的等宽字符具有相同的宽度</td>
+      </tr>
+    </tbody>
+  </table>
+  <h4 id="字体系列">字体系列</h4>
+  <p><code>font-family</code>属性设置文本的字体系列</p>
+  <p>该值应该多设置几个字体名称作为一种&quot;后备&quot;机制，如果浏览器不支持第一种字体，将尝试下一种字体，使用逗号分隔指明。</p>
+  <h4 id="字体样式">字体样式</h4>
+  <p><code>font-style</code>用来指定斜体文字的字体样式属性</p>
+  <ul>
+    <li>
+      <p>正常(<strong>normal</strong>)</p>
+    </li>
+    <li>
+      <p>斜体（<strong>italic</strong>）</p>
+    </li>
+  </ul>
+  <h4 id="字体大小">字体大小</h4>
+  <p>字体大小可以是绝对大小或者相对大小</p>
+  <p><code>font-size</code></p>
+  <p>默认为16像素（16px=1em）</p>
+  <h3 id="css链接">CSS链接</h3>
+  <h4 id="链接样式">链接样式</h4>
+  <p>在四种链接状态中，可以使用不同的样式</p>
+  <ul>
+    <li>
+      <p><strong>a:link</strong> 正常，未访问过的链接</p>
+    </li>
+    <li>
+      <p><strong>a:visited</strong> 用户已访问过的链接</p>
+    </li>
+    <li>
+      <p><strong>a:hover</strong> 当用户鼠标放在链接上时，必须跟在前两者后面</p>
+    </li>
+    <li>
+      <p><strong>a:active</strong> 链接被点击的时候，必须跟在前者后面</p>
+    </li>
+  </ul>
+  <h3 id="css列表">CSS列表</h3>
+  <ul>
+    <li>
+      <p>
+        可以在<code>&lt;ul&gt;</code>内的<strong>style:list-style-type</strong>属性赋予不同的值改变前置符号，空心圆（<strong>circle</strong>）、方形（<strong>square</strong>）、实心圆（<strong>disc</strong>）
+      </p>
+    </li>
+    <li>
+      <p>
+        可以在<code>&lt;ol&gt;</code>内的<strong>style:list-style-type</strong>属性赋予不同的值改变前置符号，小写字母（<strong>lower-alpha</strong>）、大写罗马数字（<strong>upper-roman</strong>）
+      </p>
+    </li>
+  </ul>
+  <p>默认情况下，两者都内置了内边距和外边距，可以使用<code>margin:0</code>和<code>padding:0</code>来移除</p>
+  <h3 id="css表格">CSS表格</h3>
+  <h4 id="表格边框">表格边框</h4>
+  <p><code>border</code>属性需要填入三个值，依次为<strong>粗细</strong>、<strong>线条样式</strong>、<strong>颜色</strong></p>
+  <p><strong>表</strong>和<strong>th</strong>/<strong>td</strong>有独立的边界</p>
+  <h4 id="折叠边框">折叠边框</h4>
+  <p><code>border-collapse</code>属性设置表格的边框是否被折叠成一个单一的边框或隔开</p>
+  <h4 id="表格宽度和高度">表格宽度和高度</h4>
+  <p><code>width</code>和<code>height</code>，值可以为百分数或者像素</p>
+  <h4 id="表格文字对齐">表格文字对齐</h4>
+  <p><code>text-align</code>，值可以为<strong>right</strong>、<strong>left</strong>、<strong>center</strong>等</p>
+  <h4 id="表格填充">表格填充</h4>
+  <p><code>padding</code>属性可以控制边框和表格内容之间的间距，用于<code>&lt;td&gt;</code>和<code>&lt;th&gt;</code>标签中</p>
+  <h4 id="表格颜色">表格颜色</h4>
+  <ul>
+    <li>
+      <p><code>backgrond-color</code>属性可以指定背景颜色</p>
+    </li>
+    <li>
+      <p><code>border</code>属性可以指定边框颜色</p>
+    </li>
+    <li>
+      <p><code>color</code>属性可以指定文本颜色</p>
+    </li>
+  </ul>
+  <h3 id="css盒子模型">CSS盒子模型</h3>
+  <p><img src="images/postWeb/pic3.png" alt="盒子模型"></p>
+  <p>所有HTML模型都可以看做盒子（如上）</p>
+  <p>从外到内分别为：</p>
+  <ul>
+    <li>
+      <p><strong>Margin</strong>：清楚边框外的区域，外边距是透明的</p>
+    </li>
+    <li>
+      <p><strong>Border</strong>：围绕在内边距和内容外的边框</p>
+    </li>
+    <li>
+      <p><strong>Padding</strong>：清除内容周围的区域，内边距是透明的</p>
+    </li>
+    <li>
+      <p><strong>Content</strong>：盒子的内容，显示文本和图像</p>
+    </li>
+  </ul>
+  <h4 id="元素的宽度和高度">元素的宽度和高度</h4>
+  <p>当指定一个CSS元素的宽度和高度属性的时候，设置的是<strong>内容区域</strong>的宽度和高度</p>
+  <h3 id="css边框">CSS边框</h3>
+  <h4 id="边框样式">边框样式</h4>
+  <p><code>border-style</code>属性可以定义边框线条样式</p>
+  <ul>
+    <li>
+      <p><strong>none</strong>定义无边框</p>
+    </li>
+    <li>
+      <p><strong>doted</strong>定义点线边框</p>
+    </li>
+    <li>
+      <p><strong>dashed</strong>定义虚线边框</p>
+    </li>
+    <li>
+      <p><strong>solid</strong>定义实线边框</p>
+    </li>
+    <li>
+      <p><strong>double</strong>定义两个个边框</p>
+    </li>
+  </ul>
+  <h4 id="边框宽度">边框宽度</h4>
+  <p><code>border-width</code>属性为边框指定宽度，值可以为指定长度值（<strong>px,em...</strong>），或者使用关键字（<strong>thick, medium,
+      thin</strong>）</p>
+  <h4 id="边框颜色">边框颜色</h4>
+  <p><code>border-color</code>属性用于设定边框的颜色</p>
+  <h4 id="单独设置边框样式">单独设置边框样式</h4>
+  <p>
+    在<code>border-style</code>边框样式的基础上，插入关键词构成<code>border-top-style</code>，<code>border-right-style</code>，<code>border-bottom-style</code>和<code>border-left-style</code>分别设置（注意优先级覆盖）
+  </p>
+  <h3 id="css-margin外边距padding填充">CSS margin（外边距）、padding（填充）</h3>
+  <p>对<code>margin</code>/<code>padding</code>属性赋值直接调整四条外边距的属性</p>
+  <p>同边框一样可以单独设置某边框样式</p>
+  <p><code>padding</code>的设定可以有1-4个值</p>
+  <ul>
+    <li>
+      <p>四个时依次为：上、右、下、左</p>
+    </li>
+    <li>
+      <p>三个时依次为：上、左右、下</p>
+    </li>
+    <li>
+      <p>两个时依次为：上下、左右</p>
+    </li>
+    <li>
+      <p>一个时为所有填充</p>
+    </li>
+  </ul>
+  <h3 id="分组和嵌套">分组和嵌套</h3>
+  <h4 id="分组选择器">分组选择器</h4>
+  <p>在样式表中，对于样式相同的元素，可以使用分组选择器，每个选择器使用逗号分隔</p>
+  <pre><code>h1,h2,p
+{
+    color:green;
+}
+</code></pre>
+  <h4 id="嵌套选择器">嵌套选择器</h4>
+  <ul>
+    <li>
+      <p><code>p{ }</code>：为所有<strong>p</strong>元素指定一个样式</p>
+    </li>
+    <li>
+      <p><code>,marked{ }</code>：为所有**class=&quot;marked&quot;**的元素指定一个样式</p>
+    </li>
+    <li>
+      <p><code>.marked p{ }</code>：为所有<strong>class=&quot;marked&quot;<strong>元素内的</strong>p</strong>元素指定一个样式</p>
+    </li>
+    <li>
+      <p><code>p.marked{ }</code>：为所有<strong>class=&quot;marked&quot;<strong>的</strong>p</strong>元素指定一个样式</p>
+    </li>
+  </ul>
+  <h3 id="css-display显示">CSS Display（显示）</h3>
+  <h4 id="隐藏元素">隐藏元素</h4>
+  <ul>
+    <li><code>display:none</code></li>
+  </ul>
+  <p>可以隐藏某个元素，且隐藏的元素不会占用任何空间（即原本占用的空间也会从页面布局中消失）</p>
+  <ul>
+    <li><code>visibility:hidden</code></li>
+  </ul>
+  <p>可以隐藏某个元素，但隐藏的元素仍需占用与之前一样的空间（即被隐藏了但仍然会影响布局）</p>
+  <h4 id="块和内联元素">块和内联元素</h4>
+  <ul>
+    <li>
+      <p>使用<code>display:inline</code>可以将元素改变为内联元素</p>
+    </li>
+    <li>
+      <p>使用<code>display:block</code>可以将元素改变为块元素</p>
+    </li>
+  </ul>
+  <h3 id="css-position位置">CSS Position（位置）</h3>
+  <p><strong>position</strong>属性指定了元素的定位类型，共有五个值</p>
+  <ul>
+    <li>
+      <p><strong>static</strong>：默认值，即没有定位，不会受到top,bottom,left,right等的影响</p>
+    </li>
+    <li>
+      <p><strong>relatibe</strong>：相对定位元素的定位是相对其正常位置（移动相对定位元素，但它原本所占的空间不会改变）</p>
+    </li>
+    <li>
+      <p><strong>fixed</strong>：相对浏览器窗口是固定位置，即使窗口是滚动的它也不会移动</p>
+    </li>
+    <li>
+      <p><strong>absolute</strong>：绝对定位的元素的位置相对于最近的已定位父元素，若无已定位的父元素，则位置相对于<code>&lt;html&gt;</code></p>
+    </li>
+    <li>
+      <p>
+        <strong>sticky</strong>：粘性定位，即基于用户的滚动位置来定位，在<strong>position:relative</strong>和<strong>position:fixed</strong>之间相互切换
+      </p>
+    </li>
+  </ul>
+  <h3 id="重叠的元素">重叠的元素</h3>
+  <p>
+    <code>z-index</code>属性指定了一个元素的堆叠顺序，高堆叠顺序的元素总是在较低的堆叠顺序元素的前面（若定位重叠且没有指定堆叠顺序，<strong>最后</strong>定位在HTML代码中的元素将被显示在<strong>最前面</strong>）
+  </p>
+  <h3 id="css-overflow">CSS Overflow</h3>
+  <p><code>Overflow</code>属性可以控制内容溢出元素框时在对应的元素区间内添加滚动条</p>
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align:left">值</th>
+        <th style="text-align:left">描述</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align:left">visible</td>
+        <td style="text-align:left">默认值，内容不会修剪，会呈现在元素框之外</td>
+      </tr>
+      <tr>
+        <td style="text-align:left">hidden</td>
+        <td style="text-align:left">内容会被修剪，并且其余内容是不可见的</td>
+      </tr>
+      <tr>
+        <td style="text-align:left">scroll</td>
+        <td style="text-align:left">内容会被修剪，但是浏览器会显示滚动条以便查看其余的内容</td>
+      </tr>
+      <tr>
+        <td style="text-align:left">auto</td>
+        <td style="text-align:left">如果内容被修剪，则浏览器会显示滚动条以便查看其余的内容</td>
+      </tr>
+      <tr>
+        <td style="text-align:left">inherit</td>
+        <td style="text-align:left">规定应该从父元素继承overflow属性的值</td>
+      </tr>
+    </tbody>
+  </table>
+  <p><strong>overflow属性只工作于指定高度的块元素上</strong></p>
+  <div style="width: 200px;height: 50px;background-color: #eee;overflow: visible;">
+    <p>1
+    <p>2
+  </div>
+  </br>
+  </br>
+  <pre><code>&lt;div style=&quot;width: 200px;height: 50px;background-color: #eee;overflow: visible;&quot;&gt;
+    &lt;p&gt;1
+    &lt;p&gt;2
+&lt;/div&gt;
+</code></pre>
+  <h3 id="css-float">CSS Float</h3>
+  <p>CSS的Float（浮动）会使元素向左或向右移动（<strong>水平</strong>），其周围的元素也会重新排列</p>
+  <p>一个浮动元素会尽量向左或向右移动，直到它的外边缘碰到<strong>包含框</strong>或<strong>另一个浮动框的边框</strong>为止</p>
+  <p>浮动元素之后的元素将围绕它</p>
+  <p>浮动元素之前的元素将不会受到影响</p>
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align:left">属性</th>
+        <th style="text-align:left">描述</th>
+        <th style="text-align:left">值</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align:left"><strong>clear</strong></td>
+        <td style="text-align:left">指定不允许元素周围有浮动元素</td>
+        <td style="text-align:left">left<br>right<br>both<br>none<br>inherit</td>
+      </tr>
+      <tr>
+        <td style="text-align:left"><strong>float</strong></td>
+        <td style="text-align:left">指定一个元素是否可以浮动</td>
+        <td style="text-align:left">left<br>right<br>none<br>inherit</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="css-水平垂直对齐">CSS 水平&amp;垂直对齐</h3>
+  <h4 id="元素居中对齐">元素居中对齐</h4>
+  <p><code>margin: auto;</code>可以使一个元素居中对齐，还可以指定宽度，并将两边的空外边距平均分配
+    <strong>若没设置<code>width</code>属性（或者设置100%），居中对齐将不起作用</strong>
+  </p>
+  <h4 id="文本居中对齐">文本居中对齐</h4>
+  <p><code>text-align: center;</code>可以使得文本在元素内居中对齐</p>
+  <h4 id="图片居中对齐">图片居中对齐</h4>
+  <p>使用<code>margin:auto</code>并且放进<strong>块</strong>元素中</p>
+  <h3 id="css组合选择符">CSS组合选择符</h3>
+  <ul>
+    <li>
+      <p>后代选择器（使用空格<code> </code>）
+        选择某元素的所有后代元素</p>
+    </li>
+    <li>
+      <p>子元素选择器（使用大于号<code>&gt;</code>）
+        选择某元素的直接子元素</p>
+    </li>
+    <li>
+      <p>相邻兄弟选择器（使用加号<code>+</code>）
+        选择某元素后的一个元素（具有相同父元素）</p>
+    </li>
+    <li>
+      <p>普通兄弟选择器（使用波浪号<code>~</code>）
+        选择某元素后的所有元素</p>
+    </li>
+  </ul>
+  <h2 id="javascript">JavaScript</h2>
+  <h3 id="javascript输出">JavaScript输出</h3>
+  <p><code>window.alert()</code>弹出警告框
+    <code>document.write()</code>内容输出到HTML文档中
+    <code>console.log()</code>将内容写入浏览器控制台
+    使用<code>docement.getElementByld(id)</code>的方法访问元素，再使用<code>innerHTML</code>的方式获取元素值，并且可以进行覆盖修改
+  </p>
+  <h3 id="javascript语法">JavaScript语法</h3>
+  <h4 id="javascript字面量常量">JavaScript字面量（常量）</h4>
+  <ul>
+    <li><strong>数字(Number)字面量</strong>可以是整数或者是小数</li>
+    <li><strong>字符串(String)字面量</strong>可以使用单引号或双引号</li>
+    <li><strong>表达式字面量</strong>可以用于计算</li>
+    <li><strong>数组(Array)字面量</strong>定义一个数组
+      <code>[40, 100, 1, 5, 25]</code>
+    </li>
+    <li><strong>对象(Object)字面量</strong>定义一个对象
+      <code>{firstName:&quot;John&quot;, lastName:&quot;Doe&quot;, age:50, eyeColor:&quot;blue&quot;}</code>
+    </li>
+    <li><strong>函数(Function)字面量</strong>定义一个函数
+      <code>function myFunction(a, b) { return a * b;}</code>
+    </li>
+  </ul>
+  <h4 id="javascript变量">JavaScript变量</h4>
+  <p>使用<code>var</code>来定义变量（auto,具有动态类型），同时使用等号赋值
+    对于声明后但未赋值的变量的值为<code>undefined</code>
+    对于重新声明的变量，其值不会丢失</p>
+  <p>对于定义在函数外的变量为<strong>全局变量</strong>
+    对于定义在函数内的变量为<strong>局部变量</strong>
+    使用<code>let</code>关键字定义变量，将此变量的周期限制在<code>{}</code>内</p>
+  <p>使用<code>var</code>关键字声明的全局作用域变量属于window对象
+    使用<code>let</code>关键字声明的全局作用域变量不属于window对象</p>
+  <p><code>var</code>变量可以先使用后声明，<code>let</code>变量必须要先声明再使用</p>
+  <p><code>const</code>用来定义常量，必须<strong>初始化</strong>且<strong>后续无法更改</strong></p>
+  <h5 id="重置变量">重置变量</h5>
+  <ol>
+    <li>使用<code>var</code>关键字声明的变量在任何地方都可以修改</li>
+  </ol>
+  <pre><code>var x = 2;
+ 
+// x 为 2
+ 
+var x = 3;
+ 
+// 现在 x 为 3
+</code></pre>
+  <ol start="2">
+    <li>在相同的作用域或块级作用域中，不能使用<code>let</code>关键字来重置<code>var</code>关键字声明的变量</li>
+  </ol>
+  <pre><code>var x = 2;       // 合法
+let x = 3;       // 不合法
+{
+    var x = 4;   // 合法
+    let x = 5   // 不合法
+}
+</code></pre>
+  <ol start="3">
+    <li>在相同的作用域或块级作用域中，不能使用<code>let</code>关键字来重置<code>let</code>关键字声明的变量</li>
+  </ol>
+  <pre><code>let x = 2;       // 合法
+let x = 3;       // 不合法
+
+{
+    let x = 4;   // 合法
+    let x = 5;   // 不合法
+}
+</code></pre>
+  <ol start="4">
+    <li>在相同的作用域或块级作用域中，不能使用<code>var</code>关键字来重置<code>let</code>关键字声明的变量</li>
+  </ol>
+  <pre><code>let x = 2;       // 合法
+var x = 3;       // 不合法
+
+{
+    let x = 4;   // 合法
+    var x = 5;   // 不合法
+}
+</code></pre>
+  <ol start="5">
+    <li><code>let</code>关键字在不同作用域，或不同块级作用域中是可以重新声明赋值的</li>
+  </ol>
+  <pre><code>let x = 2;       // 合法
+
+{
+    let x = 3;   // 合法
+}
+
+{
+    let x = 4;   // 合法
+}
+</code></pre>
+  <h4 id="javascript操作符">JavaScript操作符</h4>
+  <p>使用<strong>算术运算符</strong>*来计算值
+    <code>= + - * /</code>
+  </p>
+  <p>使用<strong>赋值运算符</strong>给变量赋值
+    <code>== != &gt; &gt;= &lt;=</code>
+  </p>
+  <h4 id="javascript语句">JavaScript语句</h4>
+  <p>使用JavaScript语句来向浏览器发出命令，语句使用分号分隔</p>
+  <h4 id="javascript注释">JavaScript注释</h4>
+  <p>使用双斜杠<code>//</code>后的内容将会被浏览器忽略
+    使用<code>/*</code>和<code>*/</code>来括住多行注释内容</p>
+  <h4 id="javascript数据类型">JavaScript数据类型</h4>
+  <ul>
+    <li>
+      <p>值类型：字符串(String)、数字(Number)、布尔(Boolean)、空(Null)、未定义(Underfined)</p>
+    </li>
+    <li>
+      <p>对象类型：对象(Object)、数组(Array)、函数(Function)</p>
+    </li>
+  </ul>
+  <p>可以使用<code>typeof</code>来检测变量的数据类型</p>
+  <p>使用内置属性<code>length</code>来返回字符串的长度
+    <code>var len=txt.length</code>
+    对于特殊字符，使用<code>\</code>转义，如：<code>\'</code>、<code>\&quot;</code>等
+    在字符串中使用<code>&amp;{expression}</code>来传值
+  </p>
+  <p>JavaScript对象初始化同Python字典
+    <code>var person={firstname:&quot;John&quot;,lastname:&quot;Doe&quot;,id:1234};</code>
+    以<code>key:value</code>对的形式呈现，同时使用<code>person.firstname</code>或者<code>person[&quot;firstname&quot;]</code>来访问对象属性
+  </p>
+  <p><code>undefined</code>这个值表示变量不含有值
+    通过将变量的值设置为<code>null</code>来清空变量
+    两者值相等，类型不等</p>
+  <h4 id="javascript函数">JavaScript函数</h4>
+  <p>使用关键字<code>function</code>定义，在命名后加括号标志，括号内填入局部变量的名称</p>
+  <h4 id="javascript字母大小写">JavaScript字母大小写</h4>
+  <p>JavaScript对于<strong>大小写是敏感的</strong></p>
+  <h4 id="javascript事件">JavaScript事件</h4>
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align:center">事件</th>
+        <th style="text-align:left">描述</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align:center">onchange</td>
+        <td style="text-align:left">HTML元素改变</td>
+      </tr>
+      <tr>
+        <td style="text-align:center">onclick</td>
+        <td style="text-align:left">用户点击HTML元素</td>
+      </tr>
+      <tr>
+        <td style="text-align:center">onmouseover</td>
+        <td style="text-align:left">鼠标指针移动到指定的元素上时发生</td>
+      </tr>
+      <tr>
+        <td style="text-align:center">onmouseout</td>
+        <td style="text-align:left">用户从一个HTML元素上移开鼠标时发生</td>
+      </tr>
+      <tr>
+        <td style="text-align:center">onkeydown</td>
+        <td style="text-align:left">用户按下键盘按键</td>
+      </tr>
+      <tr>
+        <td style="text-align:center">onload</td>
+        <td style="text-align:left">浏览器已完成页面的加载</td>
+      </tr>
+    </tbody>
+  </table>
+  <p><a href="#html-dom%E4%BA%8B%E4%BB%B6">HTML DOM事件</a></p>
+  <h4 id="javascript语句-1">JavaScript语句</h4>
+  <p><code>if</code>语句同Cpp
+    <code>switch</code>语句同Cpp
+    <code>for</code>语句同Cpp
+  </p>
+  <p><code>for/in</code>语句：</p>
+  <pre><code>var person={fname:&quot;bili&quot;, lname:&quot;Gates&quot;, age:56};
+
+for (var x in person){
+    txt=txt+person[x];
+}
+</code></pre>
+  <p><code>while/do while</code>语句：</p>
+  <pre><code>while(condition)
+{
+    code
+}
+</code></pre>
+  <pre><code>do
+{
+    code
+}
+while(condition)
+</code></pre>
+  <p><code>break &amp; continue</code>语句</p>
+  <h4 id="javascript类型转换">JavaScript类型转换</h4>
+  <p>使用<code>constructor</code>属性查看对象</p>
+  <p>使用<code>String()</code>将数字、布尔值、日期转换为字符串</p>
+  <p>使用<code>Number()</code>将字符串、布尔值、日期转换为数字</p>
+  <p>若数字变量，且值错误，则返回<code>NaN</code></p>
+  <h4 id="java错误">Java错误</h4>
+  <pre><code>try{
+    code1
+    throw expection;
+}catch(e){
+    code2
+}finally{
+    code3
+}
+</code></pre>
+  <h4 id="javascript调试">JavaScript调试</h4>
+  <p><code>console.log()</code>在调试窗口上打印JavaScript值</p>
+  <p><code>debugger</code>关键字用于停止执行JavaScript，并调用调试参数</p>
+  <hr>
+  <h2 id="附录">附录</h2>
+  <h3 id="html-1">HTML</h3>
+  <h4 id="html标签附录">HTML标签（附录）</h4>
+  <p><a href="https://www.runoob.com/tags/ref-byfunc.html">完整标签（功能排序）</a></p>
+  <h5 id="常用标签">常用标签</h5>
+  <h6 id="基础">基础</h6>
+  <ul>
+    <li><code>&lt;!DOCTYPE&gt;</code>定义文档类型</li>
+    <li><code>&lt;html&gt;</code>定义一个HTML文档</li>
+    <li><code>&lt;title&gt;</code>定义文档的标题</li>
+    <li><code>&lt;body&gt;</code>定义文档的主体</li>
+    <li><code>&lt;h1&gt;-&lt;h6&gt;</code>定义HTML标题（内容）</li>
+    <li><code>&lt;p&gt;</code>定义一个段落</li>
+    <li><code>&lt;br/&gt;</code>定义换行</li>
+    <li><code>&lt;hr&gt;</code>定义水平线</li>
+    <li><code>&lt;!-- ... --&gt;</code>定义一个注释</li>
+  </ul>
+  <h6 id="格式">格式</h6>
+  <ol>
+    <li>
+      <p>字体格式</p>
+      <ul>
+        <li><code>&lt;b&gt;</code><b>定义粗体文本</b></li>
+        <li><code>&lt;code&gt;</code> <code>定义计算机文本</code></li>
+        <li><code>&lt;del&gt;</code><del>被删除文本</del></li>
+        <li><code>&lt;s&gt;</code><s>定义删除线文本</s></li>
+        <li><code>&lt;dfn&gt;</code><dfn>定义项目</dfn></li>
+        <li><code>&lt;em&gt;</code><em>定义强调文本</em></li>
+        <li><code>&lt;strong&gt;</code><strong>定义语气更强烈的强调文本</strong></li>
+        <li><code>&lt;i&gt;</code><i>定义斜体文本</i></li>
+        <li><code>&lt;ins&gt;</code><ins>定义被插入文本</ins></li>
+        <li><code>&lt;u&gt;</code><u>定义下划线文本</u></li>
+        <li><code>&lt;mark&gt;</code><mark>定义标记文本</mark></li>
+        <li><code>&lt;small&gt;</code><small>定义小号文本</small></li>
+        <li><code>&lt;sup&gt;</code>定义<sup>上标文本</sup></li>
+        <li><code>&lt;sub&gt;</code>定义<sub>下标文本</sub></li>
+      </ul>
+    </li>
+    <li>
+      <p>文段格式</p>
+      <ul>
+        <li><code>&lt;blockquote&gt;</code>
+          <blockquote>定义块引用</blockquote>
+        </li>
+        <li><code>&lt;q&gt;</code><q>定义短引用</q></li>
+        <li><code>&lt;cite&gt;</code><cite>定义引用</cite></li>
+      </ul>
+    </li>
+    <li>
+      <p>其他</p>
+      <ul>
+        <li><code>&lt;progress&gt;</code><progress></progress></li>
+      </ul>
+    </li>
+  </ol>
+  <h6 id="表单">表单</h6>
+  <ul>
+    <li><code>&lt;form&gt;</code>定义一个HTML表单，用于用户输入</li>
+    <li><code>&lt;input&gt;</code>定义一个输入控件</li>
+    <li><code>&lt;button&gt;</code>定义按钮</li>
+    <li><code>&lt;select&gt;</code>定义选择列表</li>
+    <li><code>&lt;optgroup&gt;</code>定义选择列表中相关选项的组合</li>
+    <li><code>&lt;option&gt;</code>定义选择列表中的选项</li>
+    <li><code>&lt;label&gt;</code>定义input元素的标注</li>
+    <li><code>&lt;fildset&gt;</code>定义围绕表单中元素的边框</li>
+    <li><code>&lt;legend&gt;</code>定义fieldset元素的标题</li>
+  </ul>
+  <h6 id="框架">框架</h6>
+  <ul>
+    <li><code>&lt;iframe&gt;</code>定义内联框架</li>
+    <li><code>&lt;frame&gt;</code>定义框架集 <strong>HTML5不支持该标签</strong></li>
+  </ul>
+  <h6 id="图像">图像</h6>
+  <ul>
+    <li><code>&lt;img&gt;</code>定义图像</li>
+    <li><code>&lt;map&gt;</code>定义图像映射</li>
+  </ul>
+  <h6 id="audiovideo">Audio/Video</h6>
+  <ul>
+    <li><code>&lt;audio&gt;</code>定义声音</li>
+    <li><code>&lt;video&gt;</code>定义一个音频或视频</li>
+  </ul>
+  <h6 id="链接">链接</h6>
+  <ul>
+    <li><code>&lt;a&gt;</code>定义一个链接</li>
+    <li>**<code>&lt;link**&gt;</code>定义文档与外部资源的关系</li>
+    <li>
+      <ul>
+        <li>正常，未访问过的链接<code>ain**&gt;</code>定义文档的主体部分
+          **</li>
+      </ul>
+    </li>
+  </ul>
+  <h6 id="列表---用户已访问过接">列表 - 用户已访问过接</h6>
+  <ul>
+    <li><code>&lt;ul&gt;</code>定义一个无序列表</li>
+    <li><code>&lt;ol&gt;</code>定义一个有序列表 当用户鼠标放在链接上时</li>
+    <li><code>&lt;li&gt;</code>定义一个列表项</li>
+    <li><code>&lt;dl&gt;</code>定义一个定义列表 - 链电极</li>
+    <li><code>&lt;dt&gt;</code>定义一个定义列表中的项目</li>
+    <li><code>&lt;dd&gt;</code>定义定义列表中项目的描述</li>
+    <li><code>&lt;menu&gt;</code>定义菜单列表</li>
+  </ul>
+  <h6 id="表格">表格</h6>
+  <ul>
+    <li><code>&lt;table&gt;</code>定义一个表格</li>
+    <li><code>&lt;caption&gt;</code>定义表格标题</li>
+    <li><code>&lt;th&gt;</code>定义表格中的表头单元格</li>
+    <li><code>&lt;tr&gt;</code>定义表格中的行</li>
+    <li><code>&lt;td&gt;</code>定义表格中的单元</li>
+  </ul>
+  <h6 id="样式节">样式/节</h6>
+  <ul>
+    <li><code>&lt;style&gt;</code>定义文档的样式信息</li>
+    <li><code>&lt;div&gt;</code>定义文档中的节（块）</li>
+    <li><code>&lt;span&gt;</code>定义文档中的节（具体字符串设置）</li>
+  </ul>
+  <h6 id="程序">程序</h6>
+  <ul>
+    <li><code>&lt;script&gt;</code>定义客户端脚本</li>
+  </ul>
+  <h4 id="html属性-1">HTML属性</h4>
+  <p><a href="https://www.runoob.com/tags/ref-standardattributes.html">全局属性</a></p>
+  <h5 id="常用全局属性">常用全局属性</h5>
+  <ul>
+    <li><code>&lt;class&gt;</code>规定元素的类名</li>
+    <li><code>&lt;id&gt;</code>规定元素的唯一id</li>
+    <li><code>&lt;style&gt;</code>规定元素的行内样式</li>
+  </ul>
+  <h4 id="html-dom事件">HTML DOM事件</h4>
+  <p><a href="https://www.runoob.com/jsref/dom-obj-event.html">HTML DOM事件</a></p>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sam Gold See's Blog</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <script src="scripts/index.js"></script>
+</head>
+<body>
+    <div id="top">
+        <div id="topNav">
+            <img id="pig" src="images/index/pig.jpg" alt="SGS">
+            <ul>
+                <li>
+                    <a onmouseover="this.style.color='red'" onmouseleave="this.style.color='rgb(128,128,128)'"
+                        href="index.html">Blog</a>
+                </li>
+                <li onmouseover="this.style.color='red';showPostsNav()"
+                    onmouseleave="this.style.color='rgb(128,128,128)';hidePostsNav()">Posts</li>
+                <li onmouseover="this.style.color='red';showToolsNav()"
+                    onmouseleave="this.style.color='rgb(128,128,128)';hideToolsNav()">Tools</li>
+                <li>
+                    <a href="timeLine.html" onmouseover="this.style.color='red'"
+                        onmouseleave="this.style.color='rgb(128,128,128)'">Time Line</a>
+                </li>
+            </ul>
+    
+            <div id="topSearch">
+                <img src="images/index/search.png" alt="">
+                <input type="text" placeholder=" search..." onclick="javascript:alert('功能未实装');">
+            </div>
+    
+            <br>
+    
+            <div id="postsNav" onmouseover="showPostsNav()" onmouseleave="hidePostsNav()">
+                <ul>
+                    <li>
+                        <a href="postWeb.html" onmouseover="this.style.color='red'"
+                            onmouseleave="this.style.color='black'">Web学习笔记</a>
+                    </li>
+                    <div class="line" style="margin:0px;width: 120px;"></div>
+                    <li>
+                        <a href="postMathModel.html" onmouseover="this.style.color='red'"
+                            onmouseleave="this.style.color='black'">大一数模总结</a>
+                    </li>
+                    <div class="line" style="margin:0px;width: 120px;"></div>
+                    <li>
+                        <a href="postAlgorithm.html" onmouseover="this.style.color='red'"
+                            onmouseleave="this.style.color='black'">大一算法总结</a>
+                    </li>
+                    <div class="line" style="margin:0px;width: 120px;"></div>
+                    <li>
+                        <a href="postPython.html" onmouseover="this.style.color='red'"
+                            onmouseleave="this.style.color='black'">Python学习笔记</a>
+                    </li>
+                </ul>
+            </div>
+    
+            <div id="toolsNav" onmouseover="showToolsNav()" onmouseleave="hideToolsNav()">
+                <ul>
+                    <li>
+                        <a href="toolRandomNumber.html" onmouseover="this.style.color='red'"
+                            onmouseleave="this.style.color='black'">随机数生成器</a>
+                    </li>
+                    <div class="line" style="margin:0px;width: 120px;"></div>
+                    <li>
+                        <a href="toolCaculator.html" onmouseover="this.style.color='red'"
+                            onmouseleave="this.style.color='black'">进制转换计算器</a>
+                    </li>
+                </ul>
+            </div>
+    
+            <img id="up" src="images/index/up.png" onclick="scrollToTop()">
+            <div id="uup">点击Sam Gold See可以随机主页背景</div>
+        </div>
+    
+    </div>
+
+    <div id="mainBackground">
+        <div id="mainContainer">
+            <a href="#" onclick="randomBackground()">Sam Gold See</a>
+            <ul>
+                <li id="Github" onmouseover="showGithubText()" onmouseout="hideGithubText()">
+                    <a href="https://github.com/Sam-Gold-See">&nbsp;&nbsp;&nbsp;</a>
+                </li>
+                <li id="QQ" onmouseover="showQQText()" onmouseleave="hideQQText()"></li>
+                <li id="WeChat" onmouseover="showWeChatText()" onmouseleave="hideWeChatText()"></li>
+                <li id="LuoGu" onmouseover="showLuoGuText()" onmouseleave="hideLuoGuText()">
+                    <a href="https://www.luogu.com.cn/user/1083218">&nbsp;&nbsp;&nbsp;</a>
+                </li>
+            </ul>
+
+            <div id="GithubText" onmouseover="showGithubText()" onmouseout="hideGithubText()">Github</div>
+            <div id="QQText" onmouseover="showQQText()" onmouseleave="hideQQText()">2377043893</div>
+            <div id="WeChatText" onmouseover="showWeChatText()" onmouseleave="hideWeChatText()">H15889925075</div>
+            <div id="LuoGuText" onmouseover="showLuoGuText()" onmouseleave="hideLuoGuText()">LuoGu</div>
+        
+        </div>
+    </div>
+    
+    <div id="content">
+        <div id="mainContent">
+            
+            <div class="block">
+                <div class="blockName">
+                    <a href="toolRandomNumber.html">随机数生成器</a>
+                </div>
+                <div class="line"></div>
+                <div class="blockMain">
+                    <p>　　本工具提供任意数据范围内的随机数生成功能
+                    </p>
+                </div>
+                <div class="blockTag">&nbsp;Tool&nbsp;</div>
+                <div class="blockDate">
+                    2024-06-08
+                </div>
+            </div>
+
+            <div class="block">
+                <div class="blockName">
+                    <a href="postWeb.html">Web学习笔记</a>
+                </div>
+                <div class="line"></div>
+                <div class="blockMain">
+                    <p>　　在经过2023学年第二学期的选修课“Web前端设计与开发”的学习后，我总结记录了所学内容，并采用Markdown作为我的笔记工具。这门课程主要着重于学习HTML语法、CSS语法、JavaScript语法以及一系列基础实例练习。通过这些学习内容，我深入了解了如何构建精美的网页界面，并且掌握了使用不同的语言和工具来实现交互和动态效果的技能。这个学期的学习为我打下了牢固的基础，使我能够更加自信地应对未来的前端开发挑战。</p>
+                </div>
+                <div class="blockTag">&nbsp;Post&nbsp;</div>
+                <div class="blockTag">&nbsp;Web&nbsp;</div>
+                <div class="blockDate">
+                    2024-06-01
+                </div>
+            </div>
+
+            <div class="block">
+                <div class="blockName">
+                    <a href="postMathModel.html">大一数模总结</a>
+                </div>
+                <div class="line"></div>
+                <div class="blockMain">
+                    <p>　　总结了23学年大一年级的数学模型竞赛经历和经验。
+                    </p>
+                </div>
+                <div class="blockTag">&nbsp;Post&nbsp;</div>
+                <div class="blockTag">&nbsp;Math Model&nbsp;</div>
+                <div class="blockDate">
+                    2024-05-19
+                </div>
+            </div>
+
+            <div class="block">
+                <div class="blockName">
+                    <a href="postAlgorithm.html">大一算法总结</a>
+                </div>
+                <div class="line"></div>
+                <div class="blockMain">
+                    <p>　　总结了23学年大一年级的算法竞赛经历和经验。
+                    </p>
+                </div>
+                <div class="blockTag">&nbsp;Post&nbsp;</div>
+                <div class="blockTag">&nbsp;Algorithm&nbsp;</div>
+                <div class="blockDate">
+                    2024-05-12
+                </div>
+            </div>
+
+            <div class="block">
+                <div class="blockName">
+                    <a href="postPython.html">Python学习笔记</a>
+                </div>
+                <div class="line"></div>
+                <div class="blockMain">
+                    <p>　　经历了2023学年第一学期的“Python基础”课程学习后，我对所掌握的知识进行了总结，并选择Markdown作为我的笔记工具。这门课程主要涵盖了Python语法的学习以及一系列简单的实例练习。除了课程内容外，在本学期我还进行了额外的学习，深入了解了numpy、matplotlib以及pytorch等库的用途和使用方法。通过对这些库的学习，我进一步扩展了我的编程技能，能够更灵活地处理数据和进行图形化展示，为将来在数据科学和机器学习领域的发展打下了坚实基础。
+                    </p>
+                </div>
+                <div class="blockTag">&nbsp;Post&nbsp;</div>
+                <div class="blockTag">&nbsp;Python&nbsp;</div>
+                <div class="blockDate">
+                    2024-03-19
+                </div>
+            </div>
+
+            <div class="block" style="margin-bottom: 0px;">
+                <div class="blockName">
+                    <a href="toolCaculator.html">进制转换计算器</a>
+                </div>
+                <div class="line"></div>
+                <div class="blockMain">
+                    <p>　　本工具提供三十六进制以内的整数间四则运算并且输出成任意进制的数字
+                    </p>
+                </div>
+                <div class="blockTag">&nbsp;Tool&nbsp;</div>
+                <div class="blockDate">
+                    2024-03-01
+                </div>
+            </div>
+
+            <div style="height: 50px;">
+            </div>
+
+        </div>    
+    </div>
+
+    <div id="bottom">
+        <br>
+        <p>博客及内容由且仅由</p>
+        <p>华南师范大学软件学院2023级黄淳鑫</p>
+        <p>独立制作、完成</p>
+        <br>
+    </div>
+
+</body>
+</html>

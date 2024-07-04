@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>随机数生成器</title>
+    <link rel="stylesheet" href="styles/html.css">
+    <link rel="stylesheet" href="styles/tool.css">
+    <script src="scripts/html.js" defer></script>
+    <script src="scripts/toolRandomNumber.js"></script>
+</head>
+
+<body>
+
+    <div id="top">
+        <div id="topNav">
+            <img id="pig" src="images/index/pig.jpg" alt="SGS">
+            <ul>
+                <li><a onmouseover="this.style.color='red'" onmouseleave="this.style.color='rgb(128,128,128)'"
+                        href="index.html">Blog</a></li>
+                <li onmouseover="this.style.color='red';showPostsNav()"
+                    onmouseleave="this.style.color='rgb(128,128,128)';hidePostsNav()">Posts</li>
+                <li onmouseover="this.style.color='red';showToolsNav()"
+                    onmouseleave="this.style.color='rgb(128,128,128)';hideToolsNav()">Tools</liid=>
+                <li><a href="timeLine.html" onmouseover="this.style.color='red'"
+                        onmouseleave="this.style.color='rgb(128,128,128)'">Time Line</a></li>
+            </ul>
+
+            <div id="topSearch">
+                <img src="images/index/search.png" alt="">
+                <input type="text" placeholder=" search..." onclick="javascript:alert('功能未实装');">
+            </div>
+
+            <br>
+
+            <div id="postsNav" onmouseover="showPostsNav()" onmouseleave="hidePostsNav()">
+                <ul>
+                    <li><a href="postWeb.html" onmouseover="this.style.color='red'"
+                            onmouseleave="this.style.color='black'">Web学习笔记</a></li>
+                    <div class="line" style="margin:0px;width: 120px;"></div>
+                    <li><a href="postMathModel.html" onmouseover="this.style.color='red'"
+                            onmouseleave="this.style.color='black'">大一数模总结</a></li>
+                    <div class="line" style="margin:0px;width: 120px;"></div>
+                    <li><a href="postAlgorithm.html" onmouseover="this.style.color='red'"
+                            onmouseleave="this.style.color='black'">大一算法总结</a></li>
+                    <div class="line" style="margin:0px;width: 120px;"></div>
+                    <li><a href="postPython.html" onmouseover="this.style.color='red'"
+                            onmouseleave="this.style.color='black'">Python学习笔记</a></li>
+                </ul>
+            </div>
+
+            <div id="toolsNav" onmouseover="showToolsNav()" onmouseleave="hideToolsNav()">
+                <ul>
+                    <li><a href="toolRandomNumber.html" onmouseover="this.style.color='red'"
+                            onmouseleave="this.style.color='black'">随机数生成器</a></li>
+                    <div class="line" style="margin:0px;width: 120px;"></div>
+                    <li><a href="toolCaculator.html" onmouseover="this.style.color='red'"
+                            onmouseleave="this.style.color='black'">进制转换计算器</a></li>
+                </ul>
+            </div>
+
+            <img id="up" src="images/index/up.png" onclick="scrollToTop()">
+
+        </div>
+
+    </div>
+
+    <div id="content" style="height: 2000px;">
+
+        <div id="mainContent">
+            <div id="block" style="height: 780px;">
+                <div id="blockName">
+                    随机数生成器
+                </div>
+                <div class="line"></div>
+                <br>
+                <br>
+                <br>
+                <div id="blockMain">
+                    <div id="show">
+                        <p>本工具提供任意数据范围内的随机数生成功能</p>
+                    </div>
+                    <br>
+                    <div id="caculator">
+                        <label>最大值：　</label>
+                        <input type="text" id="maxn" placeholder="输入整数">
+                        <br>
+                        <label>最小值：　</label>
+                        <input type="text" id="minn" placeholder="输入整数">
+                        <br>
+                        <label>整数型：</label>
+                        <input type="radio" id="num1" name="num" value="int" onclick="" checked>
+                        <label>浮点型：</label>
+                        <input type="radio" id="num2" name="num" value="float">
+                        <br>
+                        <button onclick="randomNumber()" id="submission">生成</button>
+                        <br>
+                        <input type="text" id="end">
+                    </div>
+                </div>
+                <div id="box"></div>
+                <div id="blockTag">&nbsp;Tool&nbsp;</div>
+                <div id="blockDate">
+                    2024-06-08
+                </div>
+            </div>
+            <div style="height: 50px;">
+            </div>
+        </div>
+
+    </div>
+
+    <div id="bottom">
+        <br>
+        <p>博客及内容由且仅由</p>
+        <p>华南师范大学软件学院2023级黄淳鑫</p>
+        <p>独立制作、完成</p>
+        <br>
+    </div>
+
+</body>
+
+</html>

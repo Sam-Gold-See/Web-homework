@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大一数模总结</title>
+    <link rel="stylesheet" href="styles/html.css">
+    <script src="scripts/html.js" defer></script>
+</head>
+
+<body>
+
+    <div id="top">
+        <div id="topNav">
+            <img id="pig" src="images/index/pig.jpg" alt="SGS">
+            <ul>
+                <li><a onmouseover="this.style.color='red'" onmouseleave="this.style.color='rgb(128,128,128)'"
+                        href="index.html">Blog</a></li>
+                <li onmouseover="this.style.color='red';showPostsNav()"
+                    onmouseleave="this.style.color='rgb(128,128,128)';hidePostsNav()">Posts</li>
+                <li onmouseover="this.style.color='red';showToolsNav()"
+                    onmouseleave="this.style.color='rgb(128,128,128)';hideToolsNav()">Tools</liid=>
+                <li><a href="timeLine.html" onmouseover="this.style.color='red'"
+                        onmouseleave="this.style.color='rgb(128,128,128)'">Time Line</a></li>
+            </ul>
+
+            <div id="topSearch">
+                <img src="images/index/search.png" alt="">
+                <input type="text" placeholder=" search..." onclick="javascript:alert('功能未实装');">
+            </div>
+
+            <br>
+
+            <div id="postsNav" onmouseover="showPostsNav()" onmouseleave="hidePostsNav()">
+                <ul>
+                    <li><a href="postWeb.html" onmouseover="this.style.color='red'"
+                            onmouseleave="this.style.color='black'">Web学习笔记</a></li>
+                    <div class="line" style="margin:0px;width: 120px;"></div>
+                    <li><a href="postMathModel.html" onmouseover="this.style.color='red'"
+                            onmouseleave="this.style.color='black'">大一数模总结</a></li>
+                    <div class="line" style="margin:0px;width: 120px;"></div>
+                    <li><a href="postAlgorithm.html" onmouseover="this.style.color='red'"
+                            onmouseleave="this.style.color='black'">大一算法总结</a></li>
+                    <div class="line" style="margin:0px;width: 120px;"></div>
+                    <li><a href="postPython.html" onmouseover="this.style.color='red'"
+                            onmouseleave="this.style.color='black'">Python学习笔记</a></li>
+                </ul>
+            </div>
+
+            <div id="toolsNav" onmouseover="showToolsNav()" onmouseleave="hideToolsNav()">
+                <ul>
+                    <li><a href="toolRandomNumber.html" onmouseover="this.style.color='red'"
+                            onmouseleave="this.style.color='black'">随机数生成器</a></li>
+                    <div class="line" style="margin:0px;width: 120px;"></div>
+                    <li><a href="toolCaculator.html" onmouseover="this.style.color='red'"
+                            onmouseleave="this.style.color='black'">进制转换计算器</a></li>
+                </ul>
+            </div>
+
+            <img id="up" src="images/index/up.png" onclick="scrollToTop()">
+
+        </div>
+
+    </div>
+
+    <div id="content">
+        <div id="mainContent">
+            <div id="block" style="height: 720px;">
+                <div id="blockName">
+                    大一算法总结
+                </div>
+                <div class="line"></div>
+                <div id="blockMain">
+                    <br>
+                    <p style="font-size: 18px;">　　大一上学期初听了优秀学长们的一个经验分享，自己总结发现适合我的主要有三条路，算法、数模、项目，至于科研这方面要接触但不清楚合不合适。算法就立刻开始接触了，10月底比完AK杯，开始接触数模，备战11月下旬的亚太杯数模竞赛。</p>
+                    <p style="font-size: 18px;">　　组好队伍之后开始备赛，这一次比赛准备得十分认真，每天基本都自学一点各自内容，每周末都预约屠输棺自习空间模拟练习，到了比赛那几天，每个人都认真、负责地完成了自己的各自任务，也是第一次通宵数模了（包不是最后一次的。。。）数模比赛最关键的点之一就是找好队友，了解过一些队伍没看对人，然后比赛期间各种装死摆烂混，但有幸我这个团队大家都很认真负责嘻嘻。总结这次比赛的话，主要难在找数据和一个方法，最关键的点就是要合理把控时间，队长要把握好数模进度，在适时推进度别拖拖拉拉（美赛没做好这点唉），一月初了解到拿了二等奖很开心，对于二月初的美赛更有信心了（bushi）。</p>
+                    <p style="font-size: 18px;">　　算法精英大赛牢完后，下一个紧随出场的就是美赛了，讨论决定做网球题目（网球有数据，上次找数据找成麻瓜了），然后对于题目中的各题解法死扣，我的最大问题就是把题目看简单了，几道题捆绑起来想要一个模型解决，然后到处搜资料却没找到合适的解法。。。导致进度很慢，我也没把控好。最后抽象地解题。幸好最后有个H奖，不像蓝桥杯爆完了。</p>
+                    <p style="font-size: 18px;">　　美赛后就是校赛，校赛数据好找，但是怎么解题是真没啥好思路。。。这次我一点小小进步就是把控好了节奏，适时去推进度（指高中数学计算证明。。。），至少不会像美赛那样太抽象了，虽然最后只混了个参赛证明，但好歹还可以。</p>
+                    <p style="font-size: 18px;">　　下一个目标是九月国赛，这次再认真准备！希望能有个好结果。</p>
+                </div>
+                <br>
+                <div style="height: 100px;"></div>
+                <div id="blockTag">&nbsp;Post&nbsp;</div>
+                <div id="blockTag">&nbsp;Algorithm&nbsp;</div>
+                <div id="blockDate">
+                    2024-05-19
+                </div>
+            </div>
+            <div style="height: 50px;">
+    
+            </div>
+        </div>
+    </div>
+
+    <div id="bottom">
+        <br>
+        <p>博客及内容由且仅由</p>
+        <p>华南师范大学软件学院2023级黄淳鑫</p>
+        <p>独立制作、完成</p>
+        <br>
+    </div>
+
+</body>
+
+</html>

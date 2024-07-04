@@ -1,0 +1,39 @@
+.timePoint{
+    font-family:cursive;
+    border-bottom: 1px solid rgb(128, 128, 128,0.5);
+}
+
+.timeNode{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    margin: 10px 0px;
+    width: 500px;
+}
+    
+.timeNode ul{
+    color: green;
+    margin-left: 25px;
+    margin-right: -5px;
+}
+        
+.timeNode span{
+    color: rgb(165,165,165);
+    margin-top: 2px;
+    margin-right: 10px;
+}
+
+.timeNode:hover{
+    scale: 1.05;
+    }
+    
+.timeNode:hover p {
+    color: rgb(255, 87, 34);
+}
+
+.timeNode:hover ul{
+    color: rgb(255, 87, 34);
+}
+
+.timeNode:hover span{
+    color: rgb(255, 87, 34);
+}

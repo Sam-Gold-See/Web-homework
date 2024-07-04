@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大一算法总结</title>
+    <link rel="stylesheet" href="styles/html.css">
+    <script src="scripts/html.js" defer></script>
+</head>
+
+<body>
+
+    <div id="top">
+        <div id="topNav">
+            <img id="pig" src="images/index/pig.jpg" alt="SGS">
+            <ul>
+                <li>
+                    <a onmouseover="this.style.color='red'" onmouseleave="this.style.color='rgb(128,128,128)'"
+                        href="index.html">Blog</a>
+                </li>
+                <li onmouseover="this.style.color='red';showPostsNav()"
+                    onmouseleave="this.style.color='rgb(128,128,128)';hidePostsNav()">Posts</li>
+                <li onmouseover="this.style.color='red';showToolsNav()"
+                    onmouseleave="this.style.color='rgb(128,128,128)';hideToolsNav()">Tools</li>
+                <li>
+                    <a href="timeLine.html" onmouseover="this.style.color='red'"
+                        onmouseleave="this.style.color='rgb(128,128,128)'">Time Line</a>
+                </li>
+            </ul>
+    
+            <div id="topSearch">
+                <img src="images/index/search.png" alt="">
+                <input type="text" placeholder=" search..." onclick="javascript:alert('功能未实装');">
+            </div>
+    
+            <br>
+    
+            <div id="postsNav" onmouseover="showPostsNav()" onmouseleave="hidePostsNav()">
+                <ul>
+                    <li>
+                        <a href="postWeb.html" onmouseover="this.style.color='red'"
+                            onmouseleave="this.style.color='black'">Web学习笔记</a>
+                    </li>
+                    <div class="line" style="margin:0px;width: 120px;"></div>
+                    <li>
+                        <a href="postMathModel.html" onmouseover="this.style.color='red'"
+                            onmouseleave="this.style.color='black'">大一数模总结</a>
+                    </li>
+                    <div class="line" style="margin:0px;width: 120px;"></div>
+                    <li>
+                        <a href="postAlgorithm.html" onmouseover="this.style.color='red'"
+                            onmouseleave="this.style.color='black'">大一算法总结</a>
+                    </li>
+                    <div class="line" style="margin:0px;width: 120px;"></div>
+                    <li>
+                        <a href="postPython.html" onmouseover="this.style.color='red'"
+                            onmouseleave="this.style.color='black'">Python学习笔记</a>
+                    </li>
+                </ul>
+            </div>
+    
+            <div id="toolsNav" onmouseover="showToolsNav()" onmouseleave="hideToolsNav()">
+                <ul>
+                    <li>
+                        <a href="toolRandomNumber.html" onmouseover="this.style.color='red'"
+                            onmouseleave="this.style.color='black'">随机数生成器</a>
+                    </li>
+                    <div class="line" style="margin:0px;width: 120px;"></div>
+                    <li>
+                        <a href="toolCaculator.html" onmouseover="this.style.color='red'"
+                            onmouseleave="this.style.color='black'">进制转换计算器</a>
+                    </li>
+                </ul>
+            </div>
+    
+            <img id="up" src="images/index/up.png" onclick="scrollToTop()">
+    
+        </div>
+    
+    </div>
+
+
+    <div id="content">
+        <div id="mainContent">
+            <div id="block" style="height: 720px;">
+                <div id="blockName">
+                    大一算法总结
+                </div>
+                <div class="line"></div>
+                <div id="blockMain">
+                    <br>
+                    <p style="font-size: 18px;">　　大一开学后正式开始接触C语言和算法（其实只是简单的编程题），进入了阶段一“自信的新手保护期”，23年9月和10月基本来刷洛谷红题，把C语言的语法等基础掌握后，迎来了第一次算法比赛“23年软院AK杯”，算是运气好，暴力A了第6题，成功到第13名混了个AK杯一等奖嘻嘻。这个时候开始对算法正式展开兴趣（还没被真正算法毒打过是这样的），然后接下来准备数模比赛、期末考试、打机等等原因，没有高强度洛谷启动了。</p>
+                    <p style="font-size: 18px;">　　期间一个同学拉我和舍友佬打2月初的算法精英大赛（万恶之源），寒假双线备战数模美赛和算法比赛，但现在想想那个时候全都是在刷已经基本掌握的内容，没有跳出舒适圈（例如开始接触C++STL、背包DFS之类的进阶算法，成功的坐牢了五个小时（喜提首次坐牢体验）。</p>
+                    <p style="font-size: 18px;">　　出狱后，成功的认识到了算法的真实难度（阶段二“永久坐牢”），紧接着就是牛客寒假训练营，期间学习了C++STL、DFS、BFS等等算法，但没有深入上强度，导致到又困在自己的舒适圈里面，增速降了下来。然后紧接着开始准备4月的蓝桥杯、天梯赛。</p>
+                    <p style="font-size: 18px;">　　坐完蓝桥杯和天梯赛的牢之后，被现实狠狠拷打了后，很快到了24年滑湿算法校赛，纯纯大牢，华附2小时不到AK、其他队猛猛过题我们嘎嘎坐牢，唉。。。比赛结束后，又看到一些天赋哥、OI爷的实力，进入了现阶段，阶段三：“认清现实和差距”，差距太大，自己也没有那天赋，所以从竞赛方向更多的转向面向就业吧，更多的还是去搞搞项目，至于以后的算法以及算法竞赛，更多的还是附带学习或者学校报销（你说的对，蓝桥杯爆到我心痛了）。没天赋、没努力、到现在晚了一年，不是不能打，只是认识到我自身要走上这条路，花费的时间、精力性价比太低了。。。开摆嘻嘻</p>
+                </div>
+                <br>
+                <div style="height: 100px;"></div>
+                <div id="blockTag">&nbsp;Post&nbsp;</div>
+                <div id="blockTag">&nbsp;Algorithm&nbsp;</div>
+                <div id="blockDate">
+                    2024-05-12
+                </div>
+            </div>
+            <div style="height: 50px;">
+    
+            </div>
+        </div>
+    </div>
+
+    <div id="bottom">
+        <br>
+        <p>博客及内容由且仅由</p>
+        <p>华南师范大学软件学院2023级黄淳鑫</p>
+        <p>独立制作、完成</p>
+        <br>
+    </div>
+
+</body>
+
+</html>

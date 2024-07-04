@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python学习笔记</title>
+    <link rel="stylesheet" href="styles/html.css">
+    <script src="scripts/html.js" defer></script>
+</head>
+
+<body>
+
+    <div id="top">
+        <div id="topNav">
+            <img id="pig" src="images/index/pig.jpg" alt="SGS">
+            <ul>
+                <li><a onmouseover="this.style.color='red'" onmouseleave="this.style.color='rgb(128,128,128)'"
+                        href="index.html">Blog</a></li>
+                <li onmouseover="this.style.color='red';showPostsNav()"
+                    onmouseleave="this.style.color='rgb(128,128,128)';hidePostsNav()">Posts</li>
+                <li onmouseover="this.style.color='red';showToolsNav()"
+                    onmouseleave="this.style.color='rgb(128,128,128)';hideToolsNav()">Tools</liid=>
+                <li><a href="timeLine.html" onmouseover="this.style.color='red'"
+                        onmouseleave="this.style.color='rgb(128,128,128)'">Time Line</a></li>
+            </ul>
+
+            <div id="topSearch">
+                <img src="images/index/search.png" alt="">
+                <input type="text" placeholder=" search..." onclick="javascript:alert('功能未实装');">
+            </div>
+
+            <br>
+
+            <div id="postsNav" onmouseover="showPostsNav()" onmouseleave="hidePostsNav()">
+                <ul>
+                    <li><a href="postWeb.html" onmouseover="this.style.color='red'"
+                            onmouseleave="this.style.color='black'">Web学习笔记</a></li>
+                    <div class="line" style="margin:0px;width: 120px;"></div>
+                    <li><a href="postMathModel.html" onmouseover="this.style.color='red'"
+                            onmouseleave="this.style.color='black'">大一数模总结</a></li>
+                    <div class="line" style="margin:0px;width: 120px;"></div>
+                    <li><a href="postAlgorithm.html" onmouseover="this.style.color='red'"
+                            onmouseleave="this.style.color='black'">大一算法总结</a></li>
+                    <div class="line" style="margin:0px;width: 120px;"></div>
+                    <li><a href="postPython.html" onmouseover="this.style.color='red'"
+                            onmouseleave="this.style.color='black'">Python学习笔记</a></li>
+                </ul>
+            </div>
+
+            <div id="toolsNav" onmouseover="showToolsNav()" onmouseleave="hideToolsNav()">
+                <ul>
+                    <li><a href="toolRandomNumber.html" onmouseover="this.style.color='red'"
+                            onmouseleave="this.style.color='black'">随机数生成器</a></li>
+                    <div class="line" style="margin:0px;width: 120px;"></div>
+                    <li><a href="toolCaculator.html" onmouseover="this.style.color='red'"
+                            onmouseleave="this.style.color='black'">进制转换计算器</a></li>
+                </ul>
+            </div>
+
+            <img id="up" src="images/index/up.png" onclick="scrollToTop()">
+
+        </div>
+
+    </div>
+
+    <div id="content">
+        <div id="mainContent">
+            <div id="block" style="height: 750px;">
+                <div id="blockName">
+                    Python学习笔记
+                </div>
+                <div class="line"></div>
+                <div id="blockMain">
+                    <br>
+                    <p>　　经历了2023学年第一学期的“Python基础”课程学习后，我对所掌握的知识进行了总结，并选择Markdown作为我的笔记工具。这门课程主要涵盖了Python语法的学习以及一系列简单的实例练习。除了课程内容外，在本学期我还进行了额外的学习，深入了解了numpy、matplotlib以及pytorch等库的用途和使用方法。通过对这些库的学习，我进一步扩展了我的编程技能，能够更灵活地处理数据和进行图形化展示，为将来在数据科学和机器学习领域的发展打下了坚实基础。
+                    </p>
+                    <br>
+                    <img src="images/postPython/content.png">
+                    <br>
+                    <p>　　使用了Markdown Preview Enhanced插件将Markdown文件转为HTML文件，下为链接：</p>
+                    <br>
+                    　　<a href="Python.html" target="_blank">Python学习笔记</a>
+                </div>
+                <br>
+                <div id="blockTag">&nbsp;Post&nbsp;</div>
+                <div id="blockTag">&nbsp;Python&nbsp;</div>
+                <div id="blockDate">
+                    2024-03-19
+                </div>
+            </div>
+            <div style="height: 50px;">
+    
+            </div>
+        </div>
+    </div>
+
+
+    <div id="bottom">
+        <br>
+        <p>博客及内容由且仅由</p>
+        <p>华南师范大学软件学院2023级黄淳鑫</p>
+        <p>独立制作、完成</p>
+        <br>
+    </div>
+
+</body>
+
+</html>
